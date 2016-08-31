@@ -3,6 +3,7 @@ package com.app.nutritionapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
 /**
  * Created by caitano on 8/29/16.
@@ -14,11 +15,7 @@ public class CadastroItem extends AppCompatActivity {
         setContentView(R.layout.cadastro_item);
     }
 
-    public void onBackPressed() {
-        Intent intent = new Intent();
-        intent.setAction(Intent.ACTION_MAIN);
-        intent.addCategory(Intent.CATEGORY_HOME);
-        startActivity(intent);
-        return;
+    public void onBackPressed(View view) {
+        finish();
     }
 }
