@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Nutrition App</string>
+    <string-array name="unidade_arrays">
+        <item>Unidade(s)</item>
+        <item>Litro</item>
+        <item>Ml</item>
+        <item>Copo(s)</item>
+        <item>Kg</item>
+        <item>Grama(s)</item>
+        <item>Porção</item>
+
+    </string-array>
 </resources>

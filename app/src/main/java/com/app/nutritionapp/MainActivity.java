@@ -17,4 +17,8 @@ public class MainActivity extends AppCompatActivity {
         Intent it = new Intent(MainActivity.this, CadastroItem.class);
         startActivity(it);
     }
+
+    public void exitApp(View view) {
+        finish();
+    }
 }
