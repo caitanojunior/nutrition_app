@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void cad_item(View view){
-        Intent it = new Intent(MainActivity.this, CadastroItem.class);
+        Intent it = new Intent(MainActivity.this, RegisterItem.class);
         startActivity(it);
     }
 

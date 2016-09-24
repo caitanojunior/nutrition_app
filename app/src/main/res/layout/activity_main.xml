@@ -20,34 +20,34 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:text="Opções:"
+            android:text="Optons:"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <Button
             android:id="@+id/btnIncluir"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Cadastro de alimento"
+            android:text="Register foods"
             android:onClick="cad_item"/>
 
         <Button
             android:id="@+id/btnConsultar"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Nada aqui ainda" />
+            android:text="Nothing" />
 
         <Button
             android:id="@+id/btnAlterar"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="MMC" />
+            android:text="IMC" />
 
         <Button
             android:id="@+id/btnExcluir"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:onClick="exitApp"
-            android:text="SAIR" />
+            android:text="Exit" />
 
     </LinearLayout>
 </LinearLayout>
