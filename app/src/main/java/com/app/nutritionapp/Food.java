@@ -4,7 +4,7 @@ package com.app.nutritionapp;
  * Created by caitano on 9/23/16.
  */
 
-public class Alimento {
+public class Food {
 
     long id;
     String name;

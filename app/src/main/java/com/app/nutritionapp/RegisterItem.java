@@ -15,8 +15,8 @@ import android.widget.Toast;
 
 public class RegisterItem extends Activity {
 
-    Repositorio r;
-    Button salvar, buscar;
+    Repository r;
+    Button save, search;
     EditText name, quantity, kcal;
     Spinner measure;
 
@@ -34,13 +34,13 @@ public class RegisterItem extends Activity {
         quantity = (EditText) findViewById(R.id.editTextQuant);
         measure = (Spinner) findViewById(R.id.spinnerMeasure);
         kcal = (EditText) findViewById(R.id.editTextKcal);
-        salvar = (Button) findViewById(R.id.ButtonRegister);
-        buscar = (Button)findViewById(R.id.buscar);
-        r = new Repositorio(this);
+        save = (Button) findViewById(R.id.ButtonRegister);
+        search = (Button)findViewById(R.id.ButtonSearch);
+        r = new Repository(this);
 
-        salvar.setOnClickListener(new View.OnClickListener() {
+        save.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Alimento a = new Alimento();
+                Food a = new Food();
                 a.setName(name.getText().toString());
                 double quantityDouble = Double.parseDouble(quantity.getText().toString());
                 a.setQuantity(quantityDouble);
@@ -50,7 +50,7 @@ public class RegisterItem extends Activity {
             }
         });
 
-        buscar.setOnClickListener(new View.OnClickListener() {
+        search.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 r.disAll();
                 for(int i=0;i<r.cont;i++){

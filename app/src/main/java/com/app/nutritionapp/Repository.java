@@ -7,7 +7,7 @@ package com.app.nutritionapp;
 import android.content.Context;
 import android.database.Cursor;
 
-public class Repositorio {
+public class Repository {
 
     DBAdapter db;
     public static String id[] = new String[100];
@@ -17,11 +17,11 @@ public class Repositorio {
     public static String kcal[] = new String[100];
     public static int cont;
 
-    public Repositorio(Context c){
+    public Repository(Context c){
         db = new DBAdapter(c);
     }
 
-    public void update(Alimento a){
+    public void update(Food a){
         db.open();
         db.update(a.getId(),
                 a.getName(),
@@ -32,7 +32,7 @@ public class Repositorio {
         db.close();
 
     }
-    public void insert(Alimento a){
+    public void insert(Food a){
         db.open();
         long id;
         id = db.insertTitle(
@@ -71,7 +71,7 @@ public class Repositorio {
     }
 
 
-    public void del(Alimento a){
+    public void del(Food a){
         db.open();
         db.deleteTitle(a.getId());
         System.out.println("Deleted");
