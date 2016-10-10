@@ -16,7 +16,7 @@
         android:orientation="vertical" >
 
         <TextView
-            android:id="@+id/textView1"
+            android:id="@+id/textViewName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
@@ -31,10 +31,10 @@
             android:onClick="cad_item"/>
 
         <Button
-            android:id="@+id/btnConsultar"
+            android:id="@+id/buscar"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Nothing" />
+            android:text="Consultar Alimentos" />
 
         <Button
             android:id="@+id/btnAlterar"

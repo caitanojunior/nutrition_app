@@ -10,7 +10,7 @@
     android:id="@+id/Inser">
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/textViewName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -19,95 +19,96 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/editTextName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/textView1"
+        android:layout_below="@+id/textViewName"
         android:ems="10">
         <requestFocus />
     </EditText>
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textViewQuant"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_marginTop="30dp"
         android:text="Quant"
-        android:layout_below="@+id/editText1"
+        android:layout_below="@+id/editTextName"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/editTextQuant"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:maxLength="4"
-        android:layout_below="@+id/textView2"
+        android:layout_below="@+id/textViewQuant"
         android:ems="10"
         android:inputType="numberDecimal"
-        android:layout_alignRight="@+id/Button1"
-        android:layout_alignEnd="@+id/Button1">
+        android:layout_alignRight="@+id/ButtonRegister"
+        android:layout_alignEnd="@+id/ButtonRegister">
         <requestFocus />
     </EditText>
 
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/spinner"
-        android:entries="@array/unidade_arrays"
+            android:id="@+id/spinnerMeasure"
+        android:entries="@array/measure_arrays"
+        android:prompt="@string/measure_prompt"
         android:layout_alignParentRight="true"
         android:layout_weight="1"
         android:textSize="18sp"
-        android:layout_alignLeft="@+id/Butto2"
-        android:layout_alignStart="@+id/Butto2"
-        android:layout_alignTop="@+id/textView2"
-        android:layout_above="@+id/editText2" />
+        android:layout_alignLeft="@+id/ButtoCancel"
+        android:layout_alignStart="@+id/ButtoCancel"
+        android:layout_alignTop="@+id/textViewQuant"
+        android:layout_above="@+id/editTextQuant" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textViewKcal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_marginTop="30dp"
         android:text="KCal"
-        android:layout_below="@+id/editText2"
+        android:layout_below="@+id/editTextQuant"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/editTextKcal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:maxLength="5"
-        android:layout_below="@+id/textView3"
+        android:layout_below="@+id/textViewKcal"
         android:ems="10"
         android:inputType="number"
-        android:layout_alignRight="@+id/editText2"
-        android:layout_alignEnd="@+id/editText2">
+        android:layout_alignRight="@+id/editTextQuant"
+        android:layout_alignEnd="@+id/editTextQuant">
         <requestFocus />
     </EditText>
 
     <Button
-        android:id="@+id/Button1"
+        android:id="@+id/ButtonRegister"
         android:text="Register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_marginRight="200dp"
         android:layout_marginTop="60dp"
-        android:layout_below="@+id/editText3"/>
+        android:layout_below="@+id/editTextKcal"/>
 
     <Button
-        android:id="@+id/Butto2"
+        android:id="@+id/ButtoCancel"
         android:text="Cancel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_marginLeft="200dp"
         android:layout_marginTop="60dp"
-        android:layout_below="@+id/editText3"
+        android:layout_below="@+id/editTextKcal"
         android:onClick="onBackPressed"/>
 </RelativeLayout>
