@@ -20,14 +20,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:text="Optons:"
+            android:text="@string/options_main"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <Button
             android:id="@+id/btnIncluir"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Register foods"
+            android:text="@string/options_register_foods"
             android:onClick="cad_item"/>
 
         <Button

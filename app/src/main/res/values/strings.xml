@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Nutrition App</string>
     <string name="measure_prompt">Choose a measure</string>
+    <string name="options_main">Options:</string>
+    <string name="options_register_foods">Register foods</string>
 
     <string-array name="measure_arrays">
         <item>Unit(s)</item>
