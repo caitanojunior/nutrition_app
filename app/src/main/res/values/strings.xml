@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Nutrition App</string>
-    <string-array name="unit_arrays">
+    <string name="measure_prompt">Choose a measure</string>
+
+    <string-array name="measure_arrays">
         <item>Unit(s)</item>
         <item>Liter</item>
         <item>Ml</item>
