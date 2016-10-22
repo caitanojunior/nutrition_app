@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void exitApp(View view) {
-        finish();
+
+        finishAffinity();
     }
 }

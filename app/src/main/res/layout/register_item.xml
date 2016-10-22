@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:text="Name"
+        android:text="@string/label_name_food"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
@@ -37,7 +37,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/editTextName"
         android:layout_marginTop="30dp"
-        android:text="Quant"
+        android:text="@string/label_quant"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
@@ -76,7 +76,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/editTextQuant"
         android:layout_marginTop="30dp"
-        android:text="KCal"
+        android:text="@string/label_kcal"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
@@ -102,7 +102,7 @@
         android:layout_below="@+id/editTextKcal"
         android:layout_marginRight="200dp"
         android:layout_marginTop="60dp"
-        android:text="Register" />
+        android:text="@string/btn_register_new_food" />
 
     <Button
         android:id="@+id/ButtoCancel"
@@ -113,5 +113,5 @@
         android:layout_marginLeft="200dp"
         android:layout_marginTop="60dp"
         android:onClick="onBackPressed"
-        android:text="Cancel" />
+        android:text="@string/btn_cancel_register_new_food" />
 </RelativeLayout>

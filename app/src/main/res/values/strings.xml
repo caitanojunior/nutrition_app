@@ -3,6 +3,14 @@
     <string name="measure_prompt">Choose a measure</string>
     <string name="options_main">Options:</string>
     <string name="options_register_foods">Register foods</string>
+    <string name="options_food_list">Food List</string>
+    <string name="option_imc">IMC</string>
+    <string name="option_exit">Exit</string>
+    <string name="label_name_food">Name</string>
+    <string name="label_quant">Quant</string>
+    <string name="label_kcal">KCal</string>
+    <string name="btn_register_new_food">Register</string>
+    <string name="btn_cancel_register_new_food">Cancel</string>
 
     <string-array name="measure_arrays">
         <item>Unit(s)</item>

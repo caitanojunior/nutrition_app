@@ -34,20 +34,20 @@
             android:id="@+id/ButtonSearch"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Consultar Alimentos" />
+            android:text="@string/options_food_list" />
 
         <Button
             android:id="@+id/btnAlterar"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="IMC" />
+            android:text="@string/option_imc" />
 
         <Button
             android:id="@+id/btnExcluir"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:onClick="exitApp"
-            android:text="Exit" />
+            android:text="@string/option_exit" />
 
     </LinearLayout>
 </LinearLayout>
