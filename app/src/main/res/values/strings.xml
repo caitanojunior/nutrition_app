@@ -11,6 +11,14 @@
     <string name="label_kcal">KCal</string>
     <string name="btn_register_new_food">Register</string>
     <string name="btn_cancel_register_new_food">Cancel</string>
+    <string name="label_imc">Calculate IMC</string>
+    <string name="label_weight">Weight</string>
+    <string name="label_height">Height:</string>
+    <string name="label_kg">Kg</string>
+    <string name="label_mt">M</string>
+    <string name="label_cm">Cm</string>
+    <string name="button_calc_imc">Calculate</string>
+    <string name="button_cancel_calc_imc">Cancel</string>
 
     <string-array name="measure_arrays">
         <item>Unit(s)</item>

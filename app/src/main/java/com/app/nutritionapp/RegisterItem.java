@@ -24,6 +24,5 @@ public class RegisterItem extends Activity {
     public void onBackPressed(View arg0) {
         Intent i = new Intent(RegisterItem.this, MainActivity.class);
         startActivity(i);
-
     }
 }

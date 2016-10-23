@@ -18,8 +18,15 @@ public class MainActivity extends AppCompatActivity {
         startActivity(it);
     }
 
-    public void exitApp(View view) {
+    public void imc(View view){
+        Intent it = new Intent(MainActivity.this, ImcActivity.class);
+        startActivity(it);
+    }
 
-        finishAffinity();
+    public void exitApp(View view) {
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
     }
 }
