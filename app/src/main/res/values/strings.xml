@@ -19,6 +19,14 @@
     <string name="label_cm">Cm</string>
     <string name="button_calc_imc">Calculate</string>
     <string name="button_cancel_calc_imc">Cancel</string>
+    <string name="action_about">About</string>
+    <string name="about">About</string>
+    <string name="about_text">
+        Nutrition App is an application developed for people that want a help to nutrition education.\n
+        \nDevelopers:\n
+        &#009;&#009;Caitano junior;\n
+        &#009;&#009;Fabrício Lelis.
+    </string>
 
     <string-array name="measure_arrays">
         <item>Unit(s)</item>
