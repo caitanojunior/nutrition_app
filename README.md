@@ -7,4 +7,5 @@ Aplicativo com a finalidade de ajudar ao usuário no controle diário de caloria
 
 ### Developers
 Caitano Júnior - caitanojunior@gmail.com
+
 Fabrício Lélis - fabriciolelis@gmail.com
