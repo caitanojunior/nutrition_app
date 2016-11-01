@@ -42,14 +42,6 @@
             android:layout_height="wrap_content"
             android:text="@string/option_imc"
             android:onClick="imc"/>
-
-        <Button
-            android:id="@+id/btnExcluir"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="exitApp"
-            android:text="@string/option_exit" />
-
     </LinearLayout>
 </LinearLayout>
 

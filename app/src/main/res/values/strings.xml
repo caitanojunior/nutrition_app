@@ -27,6 +27,7 @@
         &#009;&#009;Caitano junior;\n
         &#009;&#009;Fabrício Lelis.
     </string>
+    <string name="action_exit">Exit</string>
 
     <string-array name="measure_arrays">
         <item>Unit(s)</item>
