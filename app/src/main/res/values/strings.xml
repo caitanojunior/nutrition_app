@@ -24,10 +24,11 @@
     <string name="about_text">
         Nutrition App is an application developed for people that want a help to nutrition education.\n
         \nDevelopers:\n
-        &#009;&#009;Caitano junior;\n
-        &#009;&#009;Fabrício Lelis.
+        &#009;&#009;Caitano Junior;\n
+        &#009;&#009;Fabrício Lélis.
     </string>
     <string name="action_exit">Exit</string>
+    <string name="invalid_value_imc_calc">Please put a valid value</string>
 
     <string-array name="measure_arrays">
         <item>Unit(s)</item>
