@@ -49,18 +49,15 @@ public class ImcActivity extends Activity {
     public void calcImc(View view) {
 
         EditText getWeight = (EditText) findViewById(R.id.edit_text_weight);
-        EditText getHeightMt = (EditText) findViewById(R.id.edit_text_height_mt);
-        EditText getHeightCm = (EditText) findViewById(R.id.edit_text_height_cm);
+        EditText getHeightMt = (EditText) findViewById(R.id.edit_text_height);
 
-        if(!verifyEmptyFields(getHeightCm) && !verifyEmptyFields(getHeightMt) && !verifyEmptyFields(getHeightCm)) {
+        if(!verifyEmptyFields(getHeightMt) && !verifyEmptyFields(getWeight)) {
 
             int weight = Integer.parseInt(getWeight.getText().toString());
-            int height_mt = Integer.parseInt(getHeightMt.getText().toString());
-            float height_cm = Integer.parseInt(getHeightCm.getText().toString());
+            float height_mt = Integer.parseInt(getHeightMt.getText().toString());
 
             //calculations
-            float heightBy100 = height_cm / 100;
-            float height_total = height_mt + heightBy100;
+            float height_total = height_mt / 100;
             float height_square = height_total * height_total;
 
             float my_imc = weight / height_square;
@@ -70,20 +67,22 @@ public class ImcActivity extends Activity {
             Context contexto = getApplicationContext();
             String resposta = null;
 
-            if (my_imc < 17) {
-                resposta = "Você está muito abaixo do peso!";
+            if (my_imc < 16) {
+                resposta = getString(R.string.very_underweight_bmi);
+            } else if (my_imc <= 16.99) {
+                resposta = getString(R.string.light_underweight_bmi);
             } else if (my_imc <= 18.49) {
-                resposta = "Você está abaixo do peso!";
+                resposta = getString(R.string.underweight_bmi);
             } else if (my_imc <= 24.99) {
-                resposta = "Você está no peso ideal!";
+                resposta = getString(R.string.normal_bmi);
             } else if (my_imc <= 29.99) {
-                resposta = "Atenção, você está acima do peso ideal!";
+                resposta = getString(R.string.overweight_bmi);
             } else if (my_imc <= 34.99) {
-                resposta = "Cuidado, você está com obesidade grau I!";
+                resposta = getString(R.string.obese_bmi_level1);
             } else if (my_imc <= 39.99) {
-                resposta = "Cuidado, você está com obesidade grau II (severa)!";
+                resposta = getString(R.string.obese_bmi_level2);
             } else if (my_imc >= 40.00) {
-                resposta = "Cuidado, você está com Obesidade grau III (mórbida)!";
+                resposta = getString(R.string.obese_bmi_level3);
             }
 
             int duracao = Toast.LENGTH_LONG;
