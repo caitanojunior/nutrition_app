@@ -16,13 +16,13 @@ public class BancoControlller {
     private static final String NAME = "name";
     private static final String QUANTITY = "quantity";
     private static final String UNIT = "unit";
-    private static final String KCAL = "kcal";
+    private static final String CALORIES = "calories";
 
     public BancoControlller(Context context){
         banco = new CriaBanco(context);
     }
 
-    public String insertValues(String name, int quantity, String unit, int kcal) {
+    public String insertValues(String name, int quantity, String unit, int calories) {
         ContentValues values = new ContentValues();
         long result;
 
@@ -30,7 +30,7 @@ public class BancoControlller {
         values.put(NAME, name);
         values.put(QUANTITY, quantity);
         values.put(UNIT, unit);
-        values.put(KCAL, kcal);
+        values.put(CALORIES, calories);
 
         result = db.insert(TABLE, null, values);
         db.close();
