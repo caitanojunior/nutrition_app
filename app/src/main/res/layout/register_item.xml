@@ -52,7 +52,6 @@
         android:inputType="numberDecimal"
         android:maxLength="4">
 
-        <requestFocus />
     </EditText>
 
     <Spinner
@@ -90,8 +89,6 @@
         android:ems="10"
         android:inputType="number"
         android:maxLength="5">
-
-        <requestFocus />
     </EditText>
 
     <Button
@@ -102,6 +99,7 @@
         android:layout_below="@+id/editTextKcal"
         android:layout_marginRight="200dp"
         android:layout_marginTop="60dp"
+        android:onClick="onRegisterFood"
         android:text="@string/btn_register_new_food" />
 
     <Button

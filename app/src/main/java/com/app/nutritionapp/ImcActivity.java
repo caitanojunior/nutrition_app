@@ -89,7 +89,6 @@ public class ImcActivity extends Activity {
             String texto = "Seu IMC é: " + result + " " + resposta;
             Toast toast = Toast.makeText(contexto, texto, duracao);
             toast.show();
-
         }
     }
 
