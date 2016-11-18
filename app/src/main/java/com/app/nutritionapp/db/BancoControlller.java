@@ -22,7 +22,7 @@ public class BancoControlller {
         banco = new CriaBanco(context);
     }
 
-    public String insertValues(String name, int quantity, String unit, int calories) {
+    public long insertValues(String name, int quantity, String unit, int calories) {
         ContentValues values = new ContentValues();
         long result;
 
@@ -35,9 +35,7 @@ public class BancoControlller {
         result = db.insert(TABLE, null, values);
         db.close();
 
-        if (result == -1)
-            return "Error ao inserir registro";
-        else
-            return "Registro inserido com sucesso";
+        return result;
+
     }
 }

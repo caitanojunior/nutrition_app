@@ -39,14 +39,24 @@ public class RegisterItem extends Activity {
 
         String name = getName.getText().toString();
         String unit = mySpinner.getSelectedItem().toString();
-        String result;
+        String response;
 
         int quantity = Integer.parseInt(getQuantity.getText().toString());
         int kcal = Integer.parseInt(getKCAL.getText().toString());
+        long result;
 
         result = crud.insertValues(name, quantity, unit, kcal);
 
-        Toast.makeText(getApplicationContext(), result, Toast.LENGTH_LONG).show();
+        if (result == -1)
+            response = "Error ao inserir registro";
+        else {
+            response = "Registro inserido com sucesso";
+            getName.getText().clear();
+            getQuantity.getText().clear();
+            getKCAL.getText().clear();
+            mySpinner.getAdapter();
+        }
+        Toast.makeText(getApplicationContext(), response, Toast.LENGTH_LONG).show();
 
     }
 }
