@@ -20,7 +20,7 @@
     <string name="button_calc_imc">Calcular</string>
     <string name="button_cancel_calc_imc">Cancelar</string>
     <string name="action_about">Sobre</string>
-    <string name="about">sobre</string>
+    <string name="about">Sobre</string>
     <string name="about_text">
         Nutrition App é um aplicativo desenvolvido para pessoas que desejam um auxílio na reeducação alimentar.\n
         \nDesenvolvido por:\n
@@ -29,6 +29,14 @@
     </string>
     <string name="action_exit">Sair</string>
     <string name="invalid_value_imc_calc">Por favor, entre com um valor válido.</string>
+    <string name="very_underweight_bmi">Você está muito abaixo do peso!</string>
+    <string name="light_underweight_bmi">Você está com uma leve desnutrição!</string>
+    <string name="underweight_bmi">Você está abaixo do peso!</string>
+    <string name="normal_bmi">Você está no peso ideal!</string>
+    <string name="overweight_bmi">Atenção, você está acima do peso ideal!</string>
+    <string name="obese_bmi_level1">Cuidado, você está com obesidade grau I!</string>
+    <string name="obese_bmi_level2">Cuidado, você está com obesidade grau II (severa)!</string>
+    <string name="obese_bmi_level3">Cuidado, você está com Obesidade grau III (mórbida)!</string>
 
     <string-array name="measure_arrays">
         <item>Unid(s)</item>
