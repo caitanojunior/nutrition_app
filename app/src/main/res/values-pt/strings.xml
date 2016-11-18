@@ -7,7 +7,7 @@
     <string name="option_imc">IMC</string>
     <string name="option_exit">Sair</string>
     <string name="label_name_food">Nome</string>
-    <string name="label_quant">Quant</string>
+    <string name="label_quant">Quantidade</string>
     <string name="label_kcal">KCal</string>
     <string name="btn_register_new_food">Registrar</string>
     <string name="btn_cancel_register_new_food">Cancelar</string>
@@ -15,7 +15,6 @@
     <string name="label_weight">Peso:</string>
     <string name="label_height">Altura:</string>
     <string name="label_kg">Kg</string>
-    <string name="label_mt">M</string>
     <string name="label_cm">Cm</string>
     <string name="button_calc_imc">Calcular</string>
     <string name="button_cancel_calc_imc">Cancelar</string>
@@ -24,7 +23,7 @@
     <string name="about_text">
         Nutrition App é um aplicativo desenvolvido para pessoas que desejam um auxílio na reeducação alimentar.\n
         \nDesenvolvido por:\n
-        &#009;&#009;Caitano Junior;\n
+        &#009;&#009;Caitano Júnior;\n
         &#009;&#009;Fabrício Lélis.
     </string>
     <string name="action_exit">Sair</string>

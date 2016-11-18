@@ -7,7 +7,7 @@
     <string name="option_imc">IMC</string>
     <string name="option_exit">Exit</string>
     <string name="label_name_food">Name</string>
-    <string name="label_quant">Quant</string>
+    <string name="label_quant">Quantity</string>
     <string name="label_kcal">KCal</string>
     <string name="btn_register_new_food">Register</string>
     <string name="btn_cancel_register_new_food">Cancel</string>
@@ -23,7 +23,7 @@
     <string name="about_text">
         Nutrition App is an application developed for people that want a help to nutrition education.\n
         \nDevelopers by:\n
-        &#009;&#009;Caitano Junior;\n
+        &#009;&#009;Caitano Júnior;\n
         &#009;&#009;Fabrício Lélis.
     </string>
     <string name="action_exit">Exit</string>
@@ -36,7 +36,6 @@
     <string name="obese_bmi_level1">Beware, you are with obesity grade I!</string>
     <string name="obese_bmi_level2">Beware, you are with obesity grade II!</string>
     <string name="obese_bmi_level3">Beware, you are with obesity grade III!</string>
-
     <string-array name="measure_arrays">
         <item>Unit(s)</item>
         <item>Liter</item>
@@ -46,5 +45,4 @@
         <item>Gram(s)</item>
         <item>Portion</item>
     </string-array>
-    <string name="label_mt">M</string>
 </resources>
