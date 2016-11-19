@@ -19,10 +19,10 @@ public class ListData extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_data);
 
-        BancoController crud = new BancoController(getBaseContext());
+        DBController crud = new DBController(getBaseContext());
         Cursor cursor = crud.loadingData();
 
-        String[] nameFields = new String[] {CriaBanco.ID, CriaBanco.FOOD_NAME};
+        String[] nameFields = new String[] {CreateDB.ID, CreateDB.FOOD_NAME};
         int[] idViews = new int[] {R.id.idFood, R.id.nameItem};
 
         SimpleCursorAdapter adapter = new SimpleCursorAdapter(getBaseContext(),

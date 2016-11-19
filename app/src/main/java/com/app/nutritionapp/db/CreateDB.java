@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
  * Created by fabricio on 11/16/16.
  */
 
-public class CriaBanco extends SQLiteOpenHelper {
+public class CreateDB extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "foods_database.db";
     public static final String TABLE = "foods";
     public static final String ID = "_id";
@@ -19,7 +19,7 @@ public class CriaBanco extends SQLiteOpenHelper {
     private static final String CALORIES = "calories";
     private static final int VERSION = 2;
 
-    public CriaBanco(Context context) {
+    public CreateDB(Context context) {
         super(context, DATABASE_NAME, null, VERSION);
     }
 

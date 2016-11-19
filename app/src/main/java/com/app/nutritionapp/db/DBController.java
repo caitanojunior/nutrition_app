@@ -9,18 +9,18 @@ import android.database.sqlite.SQLiteDatabase;
  * Created by fabricio on 11/16/16.
  */
 
-public class BancoController {
+public class DBController {
 
     private SQLiteDatabase db;
-    private CriaBanco banco;
+    private CreateDB banco;
     private static final String TABLE = "foods";
     private static final String NAME = "name";
     private static final String QUANTITY = "quantity";
     private static final String UNIT = "unit";
     private static final String CALORIES = "calories";
 
-    public BancoController(Context context){
-        banco = new CriaBanco(context);
+    public DBController(Context context){
+        banco = new CreateDB(context);
     }
 
     public long insertValues(String name, int quantity, String unit, int calories) {
