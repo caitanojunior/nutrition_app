@@ -2,13 +2,14 @@ package com.app.nutritionapp.db;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 /**
  * Created by fabricio on 11/16/16.
  */
 
-public class BancoControlller {
+public class BancoController {
 
     private SQLiteDatabase db;
     private CriaBanco banco;
@@ -18,7 +19,7 @@ public class BancoControlller {
     private static final String UNIT = "unit";
     private static final String CALORIES = "calories";
 
-    public BancoControlller(Context context){
+    public BancoController(Context context){
         banco = new CriaBanco(context);
     }
 
@@ -38,4 +39,18 @@ public class BancoControlller {
         return result;
 
     }
+
+    public Cursor loadingData(){
+        Cursor cursor;
+        String[] fields =  {banco.ID, banco.FOOD_NAME};
+        db = banco.getReadableDatabase();
+        cursor = db.query(banco.TABLE, fields, null, null, null, null, null, null);
+
+        if(cursor!=null){
+            cursor.moveToFirst();
+        }
+        db.close();
+        return cursor;
+    }
+
 }

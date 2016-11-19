@@ -34,7 +34,8 @@
             android:id="@+id/ButtonSearch"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/options_food_list" />
+            android:text="@string/options_food_list"
+            android:onClick="food_list"/>
 
         <Button
             android:id="@+id/btnAlterar"

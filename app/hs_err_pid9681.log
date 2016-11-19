@@ -1,0 +1,358 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 87031808 bytes for committing reserved memory.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_linux.cpp:2627), pid=9681, tid=0x00007fa4ccc03700
+#
+# JRE version:  (8.0_76-b03) (build )
+# Java VM: OpenJDK 64-Bit Server VM (25.76-b03 mixed mode linux-amd64 compressed oops)
+# Core dump written. Default location: /home/caitano/git-local/nutrition_app/app/core or core.9681
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007fa4c4008800):  JavaThread "Unknown thread" [_thread_in_vm, id=9685, stack(0x00007fa4ccb03000,0x00007fa4ccc04000)]
+
+Stack: [0x00007fa4ccb03000,0x00007fa4ccc04000],  sp=0x00007fa4ccc02620,  free space=1021k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0x9d9fcd]  VMError::report_and_die()+0x15d
+V  [libjvm.so+0x4b4d4a]  report_vm_out_of_memory(char const*, int, unsigned long, VMErrorType, char const*)+0x8a
+V  [libjvm.so+0x845190]  os::pd_commit_memory(char*, unsigned long, unsigned long, bool)+0xf0
+V  [libjvm.so+0x83fcbf]  os::commit_memory(char*, unsigned long, unsigned long, bool)+0x1f
+V  [libjvm.so+0x8b4d9b]  PSVirtualSpace::expand_by(unsigned long)+0x5b
+V  [libjvm.so+0x8a6d18]  PSOldGen::initialize(ReservedSpace, unsigned long, char const*, int)+0xa8
+V  [libjvm.so+0x2c3793]  AdjoiningGenerations::AdjoiningGenerations(ReservedSpace, GenerationSizer*, unsigned long)+0x353
+V  [libjvm.so+0x868921]  ParallelScavengeHeap::initialize()+0x211
+V  [libjvm.so+0x9a5e59]  Universe::initialize_heap()+0x189
+V  [libjvm.so+0x9a6053]  universe_init()+0x33
+V  [libjvm.so+0x5da925]  init_globals()+0x55
+V  [libjvm.so+0x989ca3]  Threads::create_vm(JavaVMInitArgs*, bool*)+0x2b3
+V  [libjvm.so+0x647c52]  JNI_CreateJavaVM+0x52
+C  [libjli.so+0x77c8]  JavaMain+0x88
+C  [libpthread.so.0+0x75ca]  start_thread+0xca
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x00007fa4c4008800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=9685, stack(0x00007fa4ccb03000,0x00007fa4ccc04000)]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 08:04 3148253                            /opt/android-studio/jre/bin/java
+00600000-00601000 r--p 00000000 08:04 3148253                            /opt/android-studio/jre/bin/java
+00601000-00602000 rw-p 00001000 08:04 3148253                            /opt/android-studio/jre/bin/java
+009f5000-00a16000 rw-p 00000000 00:00 0                                  [heap]
+c5300000-eab00000 ---p 00000000 00:00 0 
+eab00000-ed400000 rw-p 00000000 00:00 0 
+ed400000-100000000 ---p 00000000 00:00 0 
+7fa4b5000000-7fa4b5270000 rwxp 00000000 00:00 0 
+7fa4b5270000-7fa4c4000000 ---p 00000000 00:00 0 
+7fa4c4000000-7fa4c4035000 rw-p 00000000 00:00 0 
+7fa4c4035000-7fa4c8000000 ---p 00000000 00:00 0 
+7fa4c9b66000-7fa4c9ddb000 rw-p 00000000 00:00 0 
+7fa4c9ddb000-7fa4c9f30000 ---p 00000000 00:00 0 
+7fa4c9f30000-7fa4c9f45000 rw-p 00000000 00:00 0 
+7fa4c9f45000-7fa4c9fdb000 ---p 00000000 00:00 0 
+7fa4c9fdb000-7fa4c9fe6000 rw-p 00000000 00:00 0 
+7fa4c9fe6000-7fa4ca39c000 ---p 00000000 00:00 0 
+7fa4ca39c000-7fa4ca3b6000 r-xp 00000000 08:04 3803060                    /opt/android-studio/jre/jre/lib/amd64/libzip.so
+7fa4ca3b6000-7fa4ca5b6000 ---p 0001a000 08:04 3803060                    /opt/android-studio/jre/jre/lib/amd64/libzip.so
+7fa4ca5b6000-7fa4ca5b7000 r--p 0001a000 08:04 3803060                    /opt/android-studio/jre/jre/lib/amd64/libzip.so
+7fa4ca5b7000-7fa4ca5b8000 rw-p 0001b000 08:04 3803060                    /opt/android-studio/jre/jre/lib/amd64/libzip.so
+7fa4ca5b8000-7fa4ca5c3000 r-xp 00000000 08:04 3419534                    /usr/lib64/libnss_files-2.23.so
+7fa4ca5c3000-7fa4ca7c2000 ---p 0000b000 08:04 3419534                    /usr/lib64/libnss_files-2.23.so
+7fa4ca7c2000-7fa4ca7c3000 r--p 0000a000 08:04 3419534                    /usr/lib64/libnss_files-2.23.so
+7fa4ca7c3000-7fa4ca7c4000 rw-p 0000b000 08:04 3419534                    /usr/lib64/libnss_files-2.23.so
+7fa4ca7c4000-7fa4ca7ca000 rw-p 00000000 00:00 0 
+7fa4ca7ca000-7fa4ca7f7000 r-xp 00000000 08:04 3803946                    /opt/android-studio/jre/jre/lib/amd64/libjava.so
+7fa4ca7f7000-7fa4ca9f6000 ---p 0002d000 08:04 3803946                    /opt/android-studio/jre/jre/lib/amd64/libjava.so
+7fa4ca9f6000-7fa4ca9f7000 r--p 0002c000 08:04 3803946                    /opt/android-studio/jre/jre/lib/amd64/libjava.so
+7fa4ca9f7000-7fa4ca9f9000 rw-p 0002d000 08:04 3803946                    /opt/android-studio/jre/jre/lib/amd64/libjava.so
+7fa4ca9f9000-7fa4caa09000 r-xp 00000000 08:04 3804378                    /opt/android-studio/jre/jre/lib/amd64/libverify.so
+7fa4caa09000-7fa4cac08000 ---p 00010000 08:04 3804378                    /opt/android-studio/jre/jre/lib/amd64/libverify.so
+7fa4cac08000-7fa4cac0a000 r--p 0000f000 08:04 3804378                    /opt/android-studio/jre/jre/lib/amd64/libverify.so
+7fa4cac0a000-7fa4cac0b000 rw-p 00011000 08:04 3804378                    /opt/android-studio/jre/jre/lib/amd64/libverify.so
+7fa4cac0b000-7fa4cac12000 r-xp 00000000 08:04 3419537                    /usr/lib64/librt-2.23.so
+7fa4cac12000-7fa4cae11000 ---p 00007000 08:04 3419537                    /usr/lib64/librt-2.23.so
+7fa4cae11000-7fa4cae12000 r--p 00006000 08:04 3419537                    /usr/lib64/librt-2.23.so
+7fa4cae12000-7fa4cae13000 rw-p 00007000 08:04 3419537                    /usr/lib64/librt-2.23.so
+7fa4cae13000-7fa4caf1b000 r-xp 00000000 08:04 3419531                    /usr/lib64/libm-2.23.so
+7fa4caf1b000-7fa4cb11a000 ---p 00108000 08:04 3419531                    /usr/lib64/libm-2.23.so
+7fa4cb11a000-7fa4cb11b000 r--p 00107000 08:04 3419531                    /usr/lib64/libm-2.23.so
+7fa4cb11b000-7fa4cb11c000 rw-p 00108000 08:04 3419531                    /usr/lib64/libm-2.23.so
+7fa4cb11c000-7fa4cbd02000 r-xp 00000000 08:04 3804440                    /opt/android-studio/jre/jre/lib/amd64/server/libjvm.so
+7fa4cbd02000-7fa4cbf02000 ---p 00be6000 08:04 3804440                    /opt/android-studio/jre/jre/lib/amd64/server/libjvm.so
+7fa4cbf02000-7fa4cbfa1000 r--p 00be6000 08:04 3804440                    /opt/android-studio/jre/jre/lib/amd64/server/libjvm.so
+7fa4cbfa1000-7fa4cbfca000 rw-p 00c85000 08:04 3804440                    /opt/android-studio/jre/jre/lib/amd64/server/libjvm.so
+7fa4cbfca000-7fa4cc00c000 rw-p 00000000 00:00 0 
+7fa4cc00c000-7fa4cc023000 r-xp 00000000 08:04 3417370                    /usr/lib64/libpthread-2.23.so
+7fa4cc023000-7fa4cc222000 ---p 00017000 08:04 3417370                    /usr/lib64/libpthread-2.23.so
+7fa4cc222000-7fa4cc223000 r--p 00016000 08:04 3417370                    /usr/lib64/libpthread-2.23.so
+7fa4cc223000-7fa4cc224000 rw-p 00017000 08:04 3417370                    /usr/lib64/libpthread-2.23.so
+7fa4cc224000-7fa4cc228000 rw-p 00000000 00:00 0 
+7fa4cc228000-7fa4cc22b000 r-xp 00000000 08:04 3419530                    /usr/lib64/libdl-2.23.so
+7fa4cc22b000-7fa4cc42a000 ---p 00003000 08:04 3419530                    /usr/lib64/libdl-2.23.so
+7fa4cc42a000-7fa4cc42b000 r--p 00002000 08:04 3419530                    /usr/lib64/libdl-2.23.so
+7fa4cc42b000-7fa4cc42c000 rw-p 00003000 08:04 3419530                    /usr/lib64/libdl-2.23.so
+7fa4cc42c000-7fa4cc5e5000 r-xp 00000000 08:04 3416783                    /usr/lib64/libc-2.23.so
+7fa4cc5e5000-7fa4cc7e4000 ---p 001b9000 08:04 3416783                    /usr/lib64/libc-2.23.so
+7fa4cc7e4000-7fa4cc7e8000 r--p 001b8000 08:04 3416783                    /usr/lib64/libc-2.23.so
+7fa4cc7e8000-7fa4cc7ea000 rw-p 001bc000 08:04 3416783                    /usr/lib64/libc-2.23.so
+7fa4cc7ea000-7fa4cc7ee000 rw-p 00000000 00:00 0 
+7fa4cc7ee000-7fa4cc804000 r-xp 00000000 08:04 3019000                    /opt/android-studio/jre/lib/amd64/jli/libjli.so
+7fa4cc804000-7fa4cca03000 ---p 00016000 08:04 3019000                    /opt/android-studio/jre/lib/amd64/jli/libjli.so
+7fa4cca03000-7fa4cca04000 r--p 00015000 08:04 3019000                    /opt/android-studio/jre/lib/amd64/jli/libjli.so
+7fa4cca04000-7fa4cca05000 rw-p 00016000 08:04 3019000                    /opt/android-studio/jre/lib/amd64/jli/libjli.so
+7fa4cca05000-7fa4cca29000 r-xp 00000000 08:04 3422375                    /usr/lib64/ld-2.23.so
+7fa4ccb03000-7fa4ccb06000 ---p 00000000 00:00 0 
+7fa4ccb06000-7fa4ccc08000 rw-p 00000000 00:00 0 
+7fa4ccc1d000-7fa4ccc25000 rw-s 00000000 00:26 366330                     /tmp/hsperfdata_caitano/9681
+7fa4ccc25000-7fa4ccc26000 rw-p 00000000 00:00 0 
+7fa4ccc26000-7fa4ccc27000 r--p 00000000 00:00 0 
+7fa4ccc27000-7fa4ccc28000 rw-p 00000000 00:00 0 
+7fa4ccc28000-7fa4ccc29000 r--p 00023000 08:04 3422375                    /usr/lib64/ld-2.23.so
+7fa4ccc29000-7fa4ccc2a000 rw-p 00024000 08:04 3422375                    /usr/lib64/ld-2.23.so
+7fa4ccc2a000-7fa4ccc2b000 rw-p 00000000 00:00 0 
+7ffea20c7000-7ffea20e8000 rw-p 00000000 00:00 0                          [stack]
+7ffea2113000-7ffea2115000 r--p 00000000 00:00 0                          [vvar]
+7ffea2115000-7ffea2117000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Djava.awt.headless=true -Xmx1024M -Dfile.encoding=UTF-8 -Duser.country=US -Duser.language=en -Duser.variant 
+java_command: com.android.dx.command.Main --dex --force-jumbo --num-threads=4 --multi-dex --output /home/caitano/git-local/nutrition_app/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_8 /home/caitano/git-local/nutrition_app/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8
+java_class_path (initial): /home/caitano/Android/Sdk/build-tools/24.0.2/lib/dx.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=/usr/lib64/qt-3.3/bin:/usr/java/jdk1.8.0_102/bin:/usr/java/jdk1.8.0_102/bin:/usr/java/jdk1.8.0_102/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/opt/android-studio/bin:/home/caitano/.local/bin:/home/caitano/bin
+USERNAME=caitano
+LD_LIBRARY_PATH=/opt/android-studio/bin:
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0x9daac0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0x9daac0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x840d90], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x840d90], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x840d90], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x840d90], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x840c60], sa_mask[0]=00100000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGINT: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGTERM: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGQUIT: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+
+
+---------------  S Y S T E M  ---------------
+
+OS:Fedora release 24 (Twenty Four)
+
+uname:Linux 4.7.6-200.fc24.x86_64 #1 SMP Mon Oct 3 20:10:24 UTC 2016 x86_64
+libc:glibc 2.23 NPTL 2.23 
+rlimit: STACK 8192k, CORE infinity, NPROC 31270, NOFILE 4096, AS infinity
+load average:8.08 2.38 1.21
+
+/proc/meminfo:
+MemTotal:        8025292 kB
+MemFree:          123208 kB
+MemAvailable:      26448 kB
+Buffers:            1232 kB
+Cached:          1191600 kB
+SwapCached:            0 kB
+Active:          6458940 kB
+Inactive:        1156196 kB
+Active(anon):    6434780 kB
+Inactive(anon):  1138976 kB
+Active(file):      24160 kB
+Inactive(file):    17220 kB
+Unevictable:          60 kB
+Mlocked:              60 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Dirty:              2016 kB
+Writeback:             0 kB
+AnonPages:       6423816 kB
+Mapped:           566892 kB
+Shmem:           1150072 kB
+Slab:             111580 kB
+SReclaimable:      40128 kB
+SUnreclaim:        71452 kB
+KernelStack:       15408 kB
+PageTables:        80232 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     4012644 kB
+Committed_AS:   16682300 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:      192768 kB
+DirectMap2M:     8044544 kB
+
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 42 stepping 7, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, clmul, ht, tsc, tscinvbit
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 42
+model name	: Intel(R) Core(TM) i3-2310M CPU @ 2.10GHz
+stepping	: 7
+microcode	: 0x29
+cpu MHz		: 2100.000
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer xsave avx lahf_lm epb tpr_shadow vnmi flexpriority ept vpid xsaveopt dtherm arat pln pts
+bugs		:
+bogomips	: 4190.51
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 42
+model name	: Intel(R) Core(TM) i3-2310M CPU @ 2.10GHz
+stepping	: 7
+microcode	: 0x29
+cpu MHz		: 2099.871
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer xsave avx lahf_lm epb tpr_shadow vnmi flexpriority ept vpid xsaveopt dtherm arat pln pts
+bugs		:
+bogomips	: 4195.86
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 42
+model name	: Intel(R) Core(TM) i3-2310M CPU @ 2.10GHz
+stepping	: 7
+microcode	: 0x29
+cpu MHz		: 2099.871
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer xsave avx lahf_lm epb tpr_shadow vnmi flexpriority ept vpid xsaveopt dtherm arat pln pts
+bugs		:
+bogomips	: 4194.40
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 42
+model name	: Intel(R) Core(TM) i3-2310M CPU @ 2.10GHz
+stepping	: 7
+microcode	: 0x29
+cpu MHz		: 2100.000
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer xsave avx lahf_lm epb tpr_shadow vnmi flexpriority ept vpid xsaveopt dtherm arat pln pts
+bugs		:
+bogomips	: 4194.33
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 8025292k(123248k free), swap 0k(0k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.76-b03) for linux-amd64 JRE (1.8.0_76-release-b03), built on Jun 29 2016 09:39:19 by "builder" with gcc 4.8.4
+
+time: Sat Nov 19 15:06:30 2016
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
