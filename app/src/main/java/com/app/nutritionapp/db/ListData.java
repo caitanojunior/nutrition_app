@@ -22,8 +22,8 @@ public class ListData extends Activity {
         DBController crud = new DBController(getBaseContext());
         Cursor cursor = crud.loadingData();
 
-        String[] nameFields = new String[] {CreateDB.ID, CreateDB.FOOD_NAME};
-        int[] idViews = new int[] {R.id.idFood, R.id.nameItem};
+        String[] nameFields = new String[] {CreateDB.FOOD_NAME, CreateDB.QUANTITY, CreateDB.UNIT, CreateDB.CALORIES};
+        int[] idViews = new int[] {R.id.nameItem, R.id.quantItem, R.id.unitItem, R.id.kcalItem};
 
         SimpleCursorAdapter adapter = new SimpleCursorAdapter(getBaseContext(),
                 R.layout.activity_list_data,cursor,nameFields,idViews, 0);

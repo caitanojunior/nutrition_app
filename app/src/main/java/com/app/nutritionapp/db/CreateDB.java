@@ -14,9 +14,9 @@ public class CreateDB extends SQLiteOpenHelper {
     public static final String TABLE = "foods";
     public static final String ID = "_id";
     public static final String FOOD_NAME = "name";
-    private static final String QUANTITY = "quantity";
-    private static final String UNIT = "unit";
-    private static final String CALORIES = "calories";
+    public static final String QUANTITY = "quantity";
+    public static final String UNIT = "unit";
+    public static final String CALORIES = "calories";
     private static final int VERSION = 2;
 
     public CreateDB(Context context) {

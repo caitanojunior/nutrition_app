@@ -42,7 +42,7 @@ public class DBController {
 
     public Cursor loadingData(){
         Cursor cursor;
-        String[] fields =  {banco.ID, banco.FOOD_NAME};
+        String[] fields =  {banco.ID, banco.FOOD_NAME, banco.QUANTITY, banco.UNIT, banco.CALORIES};
         db = banco.getReadableDatabase();
         cursor = db.query(banco.TABLE, fields, null, null, null, null, null, null);
 
