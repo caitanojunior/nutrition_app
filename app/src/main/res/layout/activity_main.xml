@@ -24,7 +24,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <Button
-            android:id="@+id/btnIncluir"
+            android:id="@+id/btnInclude"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/options_register_foods"
@@ -34,10 +34,11 @@
             android:id="@+id/ButtonSearch"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/options_food_list" />
+            android:text="@string/options_food_list"
+            android:onClick="food_list"/>
 
         <Button
-            android:id="@+id/btnAlterar"
+            android:id="@+id/btnIMC"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/option_imc"

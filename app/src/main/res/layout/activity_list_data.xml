@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#E5FCC2"
+    tools:context=".db.ListData">
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:cacheColorHint="#00000000">
+        </ListView>
+
+        <GridLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="5"
+            android:rowCount="2">
+
+                <TextView
+                    android:id="@+id/nameItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="fill_horizontal"
+                    android:layout_marginLeft="05dp"
+                    android:layout_marginTop="10dp"
+                    android:text="NAME" />
+
+                <TextView
+                    android:id="@+id/quantItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="fill_horizontal"
+                    android:layout_marginLeft="55dp"
+                    android:layout_marginTop="10dp"
+                    android:text="QUANT" />
+
+                <TextView
+                    android:id="@+id/unitItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="fill_horizontal"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="UNIT" />
+
+                <TextView
+                    android:id="@+id/kcalItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="fill_horizontal"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="KCAL" />
+
+        </GridLayout>
+</RelativeLayout>
+
