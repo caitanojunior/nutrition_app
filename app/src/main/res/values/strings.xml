@@ -20,6 +20,9 @@
     <string name="button_cancel_calc_imc">Cancel</string>
     <string name="action_about">About</string>
     <string name="about">About</string>
+    <string name="error_insert">Error entering record</string>
+    <string name="success_insert">Record successfully entered</string>
+
     <string name="about_text">
         Nutrition App is an application developed for people that want a help to nutrition education.\n
         \nDevelopers by:\n
@@ -37,7 +40,9 @@
     <string name="obese_bmi_level2">Beware, you are with obesity grade II!</string>
     <string name="obese_bmi_level3">Beware, you are with obesity grade III!</string>
     <string-array name="measure_arrays">
+        <item>Select</item>
         <item>Unit(s)</item>
+        <item>Slice(s)</item>
         <item>Liter</item>
         <item>Ml</item>
         <item>Cup(s)</item>
