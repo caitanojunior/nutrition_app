@@ -8,7 +8,7 @@
     <string name="option_exit">Sair</string>
     <string name="label_name_food">Nome</string>
     <string name="label_quant">Quantidade</string>
-    <string name="label_kcal">KCal</string>
+    <string name="label_kcal">Calorias</string>
     <string name="btn_register_new_food">Registrar</string>
     <string name="btn_cancel_register_new_food">Cancelar</string>
     <string name="label_imc">Calcular IMC</string>
@@ -45,7 +45,7 @@
         <item>Unid(s)</item>
         <item>Fatia(s)</item>
         <item>Litro</item>
-        <item>Ml</item>
+        <item>ml</item>
         <item>Copo(s)</item>
         <item>Kg</item>
         <item>Grama(s)</item>

@@ -8,7 +8,7 @@
     <string name="option_exit">Exit</string>
     <string name="label_name_food">Name</string>
     <string name="label_quant">Quantity</string>
-    <string name="label_kcal">KCal</string>
+    <string name="label_kcal">Calories</string>
     <string name="btn_register_new_food">Register</string>
     <string name="btn_cancel_register_new_food">Cancel</string>
     <string name="label_imc">Calculate IMC</string>
@@ -44,7 +44,7 @@
         <item>Unit(s)</item>
         <item>Slice(s)</item>
         <item>Liter</item>
-        <item>Ml</item>
+        <item>ml</item>
         <item>Cup(s)</item>
         <item>Kg</item>
         <item>Gram(s)</item>
