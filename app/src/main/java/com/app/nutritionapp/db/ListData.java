@@ -3,6 +3,7 @@ package com.app.nutritionapp.db;
 import android.app.Activity;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
@@ -12,7 +13,7 @@ import com.app.nutritionapp.R;
  * Created by caitano on 11/18/16.
  */
 
-public class ListData extends Activity {
+public class ListData extends AppCompatActivity {
     private ListView list;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
