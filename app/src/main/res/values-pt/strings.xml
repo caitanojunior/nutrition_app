@@ -39,6 +39,7 @@
     <string name="obese_bmi_level1">Cuidado, você está com obesidade grau I!</string>
     <string name="obese_bmi_level2">Cuidado, você está com obesidade grau II (severa)!</string>
     <string name="obese_bmi_level3">Cuidado, você está com Obesidade grau III (mórbida)!</string>
+    <string name="btn_ok">Ok</string>
 
     <string-array name="measure_arrays">
         <item>Selecione</item>

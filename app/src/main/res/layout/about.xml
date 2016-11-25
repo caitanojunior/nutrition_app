@@ -29,4 +29,14 @@
         android:layout_below="@+id/text_about"
         android:src="@drawable/image"/>
 
+    <Button
+        android:text="@string/btn_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:onClick="onOkPressed"
+        android:id="@+id/btn_about_ok" />
+
 </RelativeLayout>
