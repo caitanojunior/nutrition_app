@@ -1,6 +1,5 @@
 package com.app.nutritionapp;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -32,10 +31,10 @@ public class RegisterItem extends AppCompatActivity {
 
         DBController crud = new DBController(getBaseContext());
 
-        EditText getName = (EditText)findViewById(R.id.editTextName);
+        EditText getName = (EditText) findViewById(R.id.editTextName);
         EditText getQuantity = (EditText) findViewById(R.id.editTextQuant);
-        Spinner mySpinner =  (Spinner) findViewById(R.id.spinnerMeasure);
-        EditText getCalories = (EditText)findViewById(R.id.editTextKcal);
+        Spinner mySpinner = (Spinner) findViewById(R.id.spinnerMeasure);
+        EditText getCalories = (EditText) findViewById(R.id.editTextKcal);
 
         String name = getName.getText().toString();
         String unit = mySpinner.getSelectedItem().toString();

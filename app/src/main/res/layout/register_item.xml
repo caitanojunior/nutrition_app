@@ -88,8 +88,7 @@
         android:layout_below="@+id/textViewKcal"
         android:ems="10"
         android:inputType="number"
-        android:maxLength="5">
-    </EditText>
+        android:maxLength="5"></EditText>
 
     <Button
         android:id="@+id/ButtonRegister"

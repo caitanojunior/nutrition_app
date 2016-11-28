@@ -8,7 +8,7 @@ import android.view.View;
 /**
  * Created by caitano on 10/29/16.
  */
-public class AboutActivity extends Activity{
+public class AboutActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

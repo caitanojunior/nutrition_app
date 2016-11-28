@@ -1,6 +1,5 @@
 package com.app.nutritionapp;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -52,7 +51,7 @@ public class ImcActivity extends AppCompatActivity {
         EditText getWeight = (EditText) findViewById(R.id.edit_text_weight);
         EditText getHeightMt = (EditText) findViewById(R.id.edit_text_height);
 
-        if(!verifyEmptyFields(getHeightMt) && !verifyEmptyFields(getWeight)) {
+        if (!verifyEmptyFields(getHeightMt) && !verifyEmptyFields(getWeight)) {
 
             int weight = Integer.parseInt(getWeight.getText().toString());
             float height_mt = Integer.parseInt(getHeightMt.getText().toString());
@@ -87,7 +86,7 @@ public class ImcActivity extends AppCompatActivity {
             }
 
             int duracao = Toast.LENGTH_LONG;
-            String texto = "Seu IMC é: " + result + " " + resposta;
+            String texto = getString(R.string.imc_result) + result + " " + resposta;
             Toast toast = Toast.makeText(contexto, texto, duracao);
             toast.show();
         }

@@ -40,6 +40,7 @@
     <string name="obese_bmi_level2">Beware, you are with obesity grade II!</string>
     <string name="obese_bmi_level3">Beware, you are with obesity grade III!</string>
     <string name="btn_ok">Ok</string>
+    <string name="imc_result">"IMC result: "</string>
     <string-array name="measure_arrays">
         <item>Select</item>
         <item>Unit(s)</item>

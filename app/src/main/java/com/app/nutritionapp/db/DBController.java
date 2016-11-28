@@ -11,13 +11,13 @@ import android.database.sqlite.SQLiteDatabase;
 
 public class DBController {
 
-    private SQLiteDatabase db;
-    private CreateDB banco;
     private static final String TABLE = "foods";
     private static final String NAME = "name";
     private static final String QUANTITY = "quantity";
     private static final String UNIT = "unit";
     private static final String CALORIES = "calories";
+    private SQLiteDatabase db;
+    private CreateDB banco;
 
     public DBController(Context context){
         banco = new CreateDB(context);
