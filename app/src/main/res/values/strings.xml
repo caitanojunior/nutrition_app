@@ -4,14 +4,14 @@
     <string name="options_main">Options:</string>
     <string name="options_register_foods">Register foods</string>
     <string name="options_food_list">Food List</string>
-    <string name="option_imc">IMC</string>
+    <string name="option_imc">BMI</string>
     <string name="option_exit">Exit</string>
     <string name="label_name_food">Name</string>
     <string name="label_quant">Quantity</string>
     <string name="label_kcal">Calories</string>
     <string name="btn_register_new_food">Register</string>
     <string name="btn_cancel_register_new_food">Cancel</string>
-    <string name="label_imc">Calculate IMC</string>
+    <string name="label_imc">Calculate BMI</string>
     <string name="label_weight">Weight</string>
     <string name="label_height">Height:</string>
     <string name="label_kg">Kg</string>
@@ -26,7 +26,7 @@
     <string name="about_text">
         Nutrition App is an application developed for people that want a help to nutrition education.\n
         \nDevelopers by:\n
-        &#009;&#009;Caitano Júnior;\n
+        &#009;&#009;Caitano Júnior\n
         &#009;&#009;Fabrício Lélis.
     </string>
     <string name="action_exit">Exit</string>
@@ -40,7 +40,7 @@
     <string name="obese_bmi_level2">Beware, you are with obesity grade II!</string>
     <string name="obese_bmi_level3">Beware, you are with obesity grade III!</string>
     <string name="btn_ok">Ok</string>
-    <string name="imc_result">"IMC result: "</string>
+    <string name="imc_result">"BMI result: "</string>
     <string-array name="measure_arrays">
         <item>Select</item>
         <item>Unit(s)</item>
