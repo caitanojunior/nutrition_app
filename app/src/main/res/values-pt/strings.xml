@@ -41,6 +41,7 @@
     <string name="obese_bmi_level3">Cuidado, você está com Obesidade grau III (mórbida)!</string>
     <string name="btn_ok">Ok</string>
     <string name="imc_result">"Resultado do IMC: "</string>
+    <string name="errorUnit">Selecione uma unidade medida</string>
 
     <string-array name="measure_arrays">
         <item>Selecione</item>
@@ -52,5 +53,6 @@
         <item>Kg</item>
         <item>Grama(s)</item>
         <item>Porção</item>
+        <item>Colher(s)</item>
     </string-array>
 </resources>

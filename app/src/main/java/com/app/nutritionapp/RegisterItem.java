@@ -44,17 +44,22 @@ public class RegisterItem extends AppCompatActivity {
         int calories = Integer.parseInt(getCalories.getText().toString());
         long result;
 
-        result = crud.insertValues(name, quantity, unit, calories);
-
-        if (result == -1)
-            response = R.string.error_insert;
-        else {
-            response = R.string.success_insert;
-            getName.getText().clear();
-            getQuantity.getText().clear();
-            getCalories.getText().clear();
-            mySpinner.getAdapter();
+        if (unit.matches("Select") || unit.matches("Selecione")) {
+            Toast.makeText(getApplicationContext(), R.string.errorUnit, Toast.LENGTH_LONG).show();
         }
-        Toast.makeText(getApplicationContext(), response, Toast.LENGTH_LONG).show();
+        else {
+            result = crud.insertValues(name, quantity, unit, calories);
+
+            if (result == -1)
+                response = R.string.error_insert;
+            else {
+                response = R.string.success_insert;
+                getName.getText().clear();
+                getQuantity.getText().clear();
+                getCalories.getText().clear();
+                mySpinner.getAdapter();
+            }
+            Toast.makeText(getApplicationContext(), response, Toast.LENGTH_LONG).show();
+        }
     }
 }
