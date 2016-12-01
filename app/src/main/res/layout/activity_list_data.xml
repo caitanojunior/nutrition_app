@@ -10,8 +10,8 @@
 
 
     <LinearLayout
-        android:id="@+id/headerLayout"
-        android:layout_width="match_parent"
+        android:id="@+id/headerLayoutName"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
@@ -24,46 +24,93 @@
             android:layout_marginTop="10dp"
             android:layout_weight="0.40"
             android:text="NAME" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/headerLayoutQuant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/quantItem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
-            android:layout_marginLeft="55dp"
+            android:layout_marginLeft="120dp"
             android:layout_marginTop="10dp"
-            android:layout_weight="0.15"
+            android:layout_weight="0.40"
             android:text="QUANT" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/headerLayoutUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/unitItem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="200dp"
             android:layout_marginTop="10dp"
-            android:layout_weight="0.30"
+            android:layout_weight="0.40"
             android:text="UNIT" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/headerLayoutCalories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/kcalItem"
+            android:id="@+id/caloriesItem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="300dp"
             android:layout_marginTop="10dp"
-            android:layout_weight="0.15"
+            android:layout_weight="0.40"
             android:text="KCAL" />
-
     </LinearLayout>
-
-
     <ListView
-        android:id="@+id/listView"
-        android:layout_width="match_parent"
+        android:id="@+id/listView_name"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_alignParentBottom="true"
-        android:layout_below="@id/headerLayout"
+        android:layout_marginRight="270dp"
+        android:layout_below="@id/headerLayoutName"
         android:cacheColorHint="#00000000"></ListView>
+
+    <ListView
+        android:id="@+id/listView_quant"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="120dp"
+        android:layout_marginRight="200dp"
+        android:layout_below="@id/headerLayoutQuant"
+        android:cacheColorHint="#00000000"></ListView>
+    <ListView
+        android:id="@+id/listView_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="200dp"
+        android:layout_marginRight="100dp"
+        android:layout_below="@id/headerLayoutQuant"
+        android:cacheColorHint="#00000000"></ListView>
+    <ListView
+        android:id="@+id/listView_calories"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="300dp"
+        android:layout_marginRight="0dp"
+        android:layout_below="@id/headerLayoutQuant"
+        android:cacheColorHint="#00000000"></ListView>
+
 </RelativeLayout>
 
