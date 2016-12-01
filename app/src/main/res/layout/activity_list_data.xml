@@ -111,6 +111,5 @@
         android:layout_marginRight="0dp"
         android:layout_below="@id/headerLayoutQuant"
         android:cacheColorHint="#00000000"></ListView>
-
 </RelativeLayout>
 

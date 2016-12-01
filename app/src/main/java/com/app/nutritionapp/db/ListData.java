@@ -29,7 +29,7 @@ public class ListData extends AppCompatActivity {
                 R.layout.activity_list_data,cursor,nameFields,idNameViews, 0);
         listName = (ListView)findViewById(R.id.listView_name);
         listName.setAdapter(adapterName);
-//*************************************************************************************
+//************************************************************************************
         String[] quantFields = new String[] {CreateDB.QUANTITY};
         int[] idQuantViews = new int[] {R.id.quantItem};
 
@@ -37,7 +37,7 @@ public class ListData extends AppCompatActivity {
                 R.layout.activity_list_data,cursor,quantFields,idQuantViews, 0);
         listQuant = (ListView)findViewById(R.id.listView_quant);
         listQuant.setAdapter(adapterQuant);
-//*************************************************************************************
+//************************************************************************************
         String[] unitFields = new String[] {CreateDB.UNIT};
         int[] idUnitViews = new int[] {R.id.unitItem};
 
@@ -45,7 +45,7 @@ public class ListData extends AppCompatActivity {
                 R.layout.activity_list_data,cursor,unitFields,idUnitViews, 0);
         listUnit = (ListView)findViewById(R.id.listView_unit);
         listUnit.setAdapter(adapterUnit);
-//*************************************************************************************
+//************************************************************************************
         String[] kcalFields = new String[] {CreateDB.CALORIES};
         int[] idKcalViews = new int[] {R.id.caloriesItem};
 
