@@ -70,44 +70,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
-            android:layout_marginLeft="300dp"
+            android:layout_marginLeft="265dp"
             android:layout_marginTop="10dp"
             android:layout_weight="0.40"
             android:text="KCAL" />
     </LinearLayout>
-    <ListView
-        android:id="@+id/listView_name"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginRight="270dp"
-        android:layout_below="@id/headerLayoutName"
-        android:cacheColorHint="#00000000"></ListView>
 
-    <ListView
-        android:id="@+id/listView_quant"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="120dp"
-        android:layout_marginRight="200dp"
-        android:layout_below="@id/headerLayoutQuant"
-        android:cacheColorHint="#00000000"></ListView>
-    <ListView
-        android:id="@+id/listView_unit"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="200dp"
-        android:layout_marginRight="100dp"
-        android:layout_below="@id/headerLayoutQuant"
-        android:cacheColorHint="#00000000"></ListView>
     <ListView
         android:id="@+id/listView_calories"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="300dp"
+        android:layout_marginLeft="0dp"
         android:layout_marginRight="0dp"
         android:layout_below="@id/headerLayoutQuant"
         android:cacheColorHint="#00000000"></ListView>
