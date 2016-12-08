@@ -6,7 +6,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
+import com.app.nutritionapp.Food;
 import com.app.nutritionapp.R;
+
+import java.util.List;
 
 /**
  * Created by caitano on 11/18/16.
@@ -22,36 +25,27 @@ public class ListData extends AppCompatActivity {
         DBController crud = new DBController(getBaseContext());
         Cursor cursor = crud.loadingData();
 
-/*        String[] nameFields = new String[] {CreateDB.FOOD_NAME};
-        int[] idNameViews = new int[] {R.id.nameItem};
+
+        String[] Fields = new String[] {CreateDB.FOOD_NAME, CreateDB.QUANTITY, CreateDB.UNIT, CreateDB.CALORIES};
+        int[] idViews = new int[] {R.id.nameItem, R.id.quantItem, R.id.unitItem, R.id.caloriesItem};
+
 
         SimpleCursorAdapter adapterName = new SimpleCursorAdapter(getBaseContext(),
-                R.layout.activity_list_data,cursor,nameFields,idNameViews, 0);
-        listName = (ListView)findViewById(R.id.listView_name);
-        listName.setAdapter(adapterName);
-/*//************************************************************************************
-        String[] quantFields = new String[] {CreateDB.QUANTITY};
-        int[] idQuantViews = new int[] {R.id.quantItem};
-
+                R.layout.activity_list_data,cursor,Fields,idViews, 0);
         SimpleCursorAdapter adapterQuant = new SimpleCursorAdapter(getBaseContext(),
-                R.layout.activity_list_data,cursor,quantFields,idQuantViews, 0);
-        listQuant = (ListView)findViewById(R.id.listView_quant);
-        listQuant.setAdapter(adapterQuant);
-/*//***********************************************************************************
-        String[] unitFields = new String[] {CreateDB.UNIT};
-        int[] idUnitViews = new int[] {R.id.unitItem};
-
+                R.layout.activity_list_data,cursor,Fields,idViews, 0);
         SimpleCursorAdapter adapterUnit = new SimpleCursorAdapter(getBaseContext(),
-                R.layout.activity_list_data,cursor,unitFields,idUnitViews, 0);
-        listUnit = (ListView)findViewById(R.id.listView_unit);
-        listUnit.setAdapter(adapterUnit);*/
-//************************************************************************************
-        String[] kcalFields = new String[] {CreateDB.CALORIES};
-        int[] idKcalViews = new int[] {R.id.caloriesItem};
-
+                R.layout.activity_list_data,cursor,Fields,idViews, 0);
         SimpleCursorAdapter adapterCalories = new SimpleCursorAdapter(getBaseContext(),
-                R.layout.activity_list_data,cursor,kcalFields,idKcalViews, 0);
-        listCalories = (ListView)findViewById(R.id.listView_calories);
+                R.layout.activity_list_data,cursor,Fields,idViews, 0);
+
+        listName = (ListView)findViewById(R.id.listView);
+        listName.setAdapter(adapterName);
+        listQuant = (ListView)findViewById(R.id.listView);
+        listQuant.setAdapter(adapterQuant);
+        listUnit = (ListView)findViewById(R.id.listView);
+        listUnit.setAdapter(adapterUnit);
+        listCalories = (ListView)findViewById(R.id.listView);
         listCalories.setAdapter(adapterCalories);
     }
 }
