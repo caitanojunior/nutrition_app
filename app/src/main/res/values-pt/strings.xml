@@ -10,6 +10,7 @@
     <string name="label_quant">Quantidade</string>
     <string name="label_kcal">Calorias</string>
     <string name="btn_register_new_food">Registrar</string>
+    <string name="btn_update_food">Atualizar</string>
     <string name="btn_cancel_register_new_food">Cancelar</string>
     <string name="label_imc">Calcular IMC</string>
     <string name="label_weight">Peso:</string>

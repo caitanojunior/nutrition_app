@@ -10,6 +10,7 @@
     <string name="label_quant">Quantity</string>
     <string name="label_kcal">Calories</string>
     <string name="btn_register_new_food">Register</string>
+    <string name="btn_update_food">Update</string>
     <string name="btn_cancel_register_new_food">Cancel</string>
     <string name="label_imc">Calculate BMI</string>
     <string name="label_weight">Weight</string>

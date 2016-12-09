@@ -1,15 +1,15 @@
 package com.app.nutritionapp.db;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
+import android.widget.AdapterView;
 
-import com.app.nutritionapp.Food;
 import com.app.nutritionapp.R;
-
-import java.util.List;
 
 /**
  * Created by caitano on 11/18/16.
@@ -20,10 +20,10 @@ public class ListData extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_data);
+        setContentView(R.layout.layout_list_data);
 
         DBController crud = new DBController(getBaseContext());
-        Cursor cursor = crud.loadingData();
+        final Cursor cursor = crud.loadingData();
 
 
         String[] Fields = new String[] {CreateDB.FOOD_NAME, CreateDB.QUANTITY, CreateDB.UNIT, CreateDB.CALORIES};
@@ -31,13 +31,13 @@ public class ListData extends AppCompatActivity {
 
 
         SimpleCursorAdapter adapterName = new SimpleCursorAdapter(getBaseContext(),
-                R.layout.activity_list_data,cursor,Fields,idViews, 0);
+                R.layout.layout_list_data,cursor,Fields,idViews, 0);
         SimpleCursorAdapter adapterQuant = new SimpleCursorAdapter(getBaseContext(),
-                R.layout.activity_list_data,cursor,Fields,idViews, 0);
+                R.layout.layout_list_data,cursor,Fields,idViews, 0);
         SimpleCursorAdapter adapterUnit = new SimpleCursorAdapter(getBaseContext(),
-                R.layout.activity_list_data,cursor,Fields,idViews, 0);
+                R.layout.layout_list_data,cursor,Fields,idViews, 0);
         SimpleCursorAdapter adapterCalories = new SimpleCursorAdapter(getBaseContext(),
-                R.layout.activity_list_data,cursor,Fields,idViews, 0);
+                R.layout.layout_list_data,cursor,Fields,idViews, 0);
 
         listName = (ListView)findViewById(R.id.listView);
         listName.setAdapter(adapterName);
@@ -47,5 +47,18 @@ public class ListData extends AppCompatActivity {
         listUnit.setAdapter(adapterUnit);
         listCalories = (ListView)findViewById(R.id.listView);
         listCalories.setAdapter(adapterCalories);
+
+        listName.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String codigo;
+                cursor.moveToPosition(position);
+                codigo = cursor.getString(cursor.getColumnIndexOrThrow(CreateDB.ID));
+                Intent intent = new Intent(ListData.this, UpdateData.class);
+                intent.putExtra("id", codigo);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 }

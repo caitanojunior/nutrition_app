@@ -53,4 +53,36 @@ public class DBController {
         return cursor;
     }
 
+
+    public Cursor loadDataById(int id){
+        Cursor cursor;
+        String[] fields =  {banco.ID, banco.FOOD_NAME, banco.QUANTITY, banco.UNIT, banco.CALORIES};
+        String where = CreateDB.ID + "=" + id;
+        db = banco.getReadableDatabase();
+        cursor = db.query(CreateDB.TABLE,fields,where, null, null, null, null, null);
+
+        if(cursor!=null){
+            cursor.moveToFirst();
+        }
+        db.close();
+        return cursor;
+    }
+
+    public void updateRegister(int id, String name, String quant, String kcal){
+        ContentValues newValues;
+        String where;
+
+        db = banco.getWritableDatabase();
+
+        where = CreateDB.ID + "=" + id;
+
+        newValues = new ContentValues();
+        newValues.put(CreateDB.FOOD_NAME, name);
+        newValues.put(CreateDB.QUANTITY, quant);
+        newValues.put(CreateDB.CALORIES, kcal);
+
+        db.update(CreateDB.TABLE,newValues,where,null);
+        db.close();
+    }
+
 }

@@ -14,16 +14,16 @@ import com.app.nutritionapp.db.DBController;
  * Created by caitano on 9/23/16.
  */
 
-public class RegisterItem extends AppCompatActivity {
+public class RegisterItemActivity extends AppCompatActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.register_item);
+        setContentView(R.layout.layout_register_item);
     }
 
     public void onBackPressed(View arg0) {
-        Intent i = new Intent(RegisterItem.this, MainActivity.class);
+        Intent i = new Intent(RegisterItemActivity.this, MainActivity.class);
         startActivity(i);
     }
 
