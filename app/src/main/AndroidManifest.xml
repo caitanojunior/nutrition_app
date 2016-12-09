@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".RegisterItem">
+        <activity android:name=".RegisterItemActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>

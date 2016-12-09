@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.layout_main);
     }
 
     @Override
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void cad_item(View view) {
-        Intent it = new Intent(MainActivity.this, RegisterItem.class);
+        Intent it = new Intent(MainActivity.this, RegisterItemActivity.class);
         startActivity(it);
     }
 
