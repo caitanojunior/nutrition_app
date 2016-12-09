@@ -25,6 +25,7 @@
             android:layout_weight="0.40"
             android:text="NAME" />
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/headerLayoutQuant"
         android:layout_width="wrap_content"
@@ -36,7 +37,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
-            android:layout_marginLeft="120dp"
+            android:layout_marginLeft="150dp"
             android:layout_marginTop="10dp"
             android:layout_weight="0.40"
             android:text="QUANT" />
@@ -53,7 +54,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
-            android:layout_marginLeft="200dp"
+            android:layout_marginLeft="230dp"
             android:layout_marginTop="10dp"
             android:layout_weight="0.40"
             android:text="UNIT" />
@@ -70,7 +71,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
-            android:layout_marginLeft="265dp"
+            android:layout_marginLeft="320dp"
             android:layout_marginTop="10dp"
             android:layout_weight="0.40"
             android:text="KCAL" />
