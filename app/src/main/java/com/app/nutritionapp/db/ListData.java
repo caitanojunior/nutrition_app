@@ -1,10 +1,13 @@
 package com.app.nutritionapp.db;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
+import android.widget.AdapterView;
 
 import com.app.nutritionapp.R;
 
@@ -20,7 +23,7 @@ public class ListData extends AppCompatActivity {
         setContentView(R.layout.layout_list_data);
 
         DBController crud = new DBController(getBaseContext());
-        Cursor cursor = crud.loadingData();
+        final Cursor cursor = crud.loadingData();
 
 
         String[] Fields = new String[] {CreateDB.FOOD_NAME, CreateDB.QUANTITY, CreateDB.UNIT, CreateDB.CALORIES};
@@ -44,5 +47,18 @@ public class ListData extends AppCompatActivity {
         listUnit.setAdapter(adapterUnit);
         listCalories = (ListView)findViewById(R.id.listView);
         listCalories.setAdapter(adapterCalories);
+
+        listName.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String codigo;
+                cursor.moveToPosition(position);
+                codigo = cursor.getString(cursor.getColumnIndexOrThrow(CreateDB.ID));
+                Intent intent = new Intent(ListData.this, UpdateData.class);
+                intent.putExtra("id", codigo);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 }

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Inser"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".RegisterItemActivity">
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/label_name_food"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textViewName"
+        android:ems="10">
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textViewQuant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editTextName"
+        android:layout_marginTop="30dp"
+        android:text="@string/label_quant"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/editTextQuant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/ButtonRegister"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/ButtonRegister"
+        android:layout_below="@+id/textViewQuant"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:maxLength="4">
+
+    </EditText>
+
+    <Spinner
+        android:id="@+id/spinnerMeasure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editTextQuant"
+        android:layout_alignLeft="@+id/ButtoCancel"
+        android:layout_alignParentRight="true"
+        android:layout_alignStart="@+id/ButtoCancel"
+        android:layout_alignTop="@+id/textViewQuant"
+        android:layout_weight="1"
+        android:entries="@array/measure_arrays"
+        android:prompt="@string/measure_prompt"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textViewKcal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editTextQuant"
+        android:layout_marginTop="30dp"
+        android:text="@string/label_kcal"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/editTextKcal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/editTextQuant"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/editTextQuant"
+        android:layout_below="@+id/textViewKcal"
+        android:ems="10"
+        android:inputType="number"
+        android:maxLength="5"></EditText>
+
+    <Button
+        android:id="@+id/ButtonUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editTextKcal"
+        android:layout_marginRight="200dp"
+        android:layout_marginTop="60dp"
+        android:onClick="onRegisterFood"
+        android:text="@string/btn_update_food" />
+
+    <Button
+        android:id="@+id/ButtoCancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/editTextKcal"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="60dp"
+        android:onClick="onBackPressed"
+        android:text="@string/btn_cancel_register_new_food" />
+</RelativeLayout>
