@@ -110,6 +110,6 @@
         android:layout_below="@+id/editTextKcal"
         android:layout_marginLeft="200dp"
         android:layout_marginTop="60dp"
-        android:onClick="onBackPressed"
+        android:onClick="onBackPressedListFood"
         android:text="@string/btn_cancel_register_new_food" />
 </RelativeLayout>

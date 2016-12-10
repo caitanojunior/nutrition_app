@@ -8,7 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.app.nutritionapp.MainActivity;
 import com.app.nutritionapp.R;
+import com.app.nutritionapp.RegisterItemActivity;
 
 /**
  * Created by caitano on 12/9/16.
@@ -56,5 +58,10 @@ public class UpdateData extends Activity {
                 finish();
             }
         });
+    }
+
+    public void onBackPressedListFood(View arg0) {
+        Intent i = new Intent(UpdateData.this, ListData.class);
+        startActivity(i);
     }
 }
