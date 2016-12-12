@@ -86,4 +86,11 @@ public class DBController {
         db.close();
     }
 
+    public void deleteRegister(int id){
+        String where = CreateDB.ID + "=" + id;
+        db = banco.getReadableDatabase();
+        db.delete(CreateDB.TABLE,where,null);
+        db.close();
+    }
+
 }
