@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 import com.app.nutritionapp.MainActivity;
 import com.app.nutritionapp.R;
@@ -19,6 +20,7 @@ import com.app.nutritionapp.RegisterItemActivity;
 public class UpdateData extends Activity {
     EditText name;
     EditText quantity;
+    Spinner unit;
     EditText kcal;
     Button update;
     Cursor cursor;
@@ -37,6 +39,7 @@ public class UpdateData extends Activity {
 
         name = (EditText)findViewById(R.id.editTextName);
         quantity = (EditText)findViewById(R.id.editTextQuant);
+        unit = (Spinner) findViewById(R.id.spinnerMeasure);
         kcal = (EditText)findViewById(R.id.editTextKcal);
 
 
@@ -45,6 +48,7 @@ public class UpdateData extends Activity {
         cursor = crud.loadDataById(Integer.parseInt(id));
         name.setText(cursor.getString(cursor.getColumnIndexOrThrow(CreateDB.FOOD_NAME)));
         quantity.setText(cursor.getString(cursor.getColumnIndexOrThrow(CreateDB.QUANTITY)));
+        unit.setTag(cursor.getString(cursor.getColumnIndexOrThrow(CreateDB.UNIT)));
         kcal.setText(cursor.getString(cursor.getColumnIndexOrThrow(CreateDB.CALORIES)));
 
 
@@ -52,7 +56,7 @@ public class UpdateData extends Activity {
             @Override
             public void onClick(View v) {
                 crud.updateRegister(Integer.parseInt(id), name.getText().toString(),quantity.getText().toString(),
-                        kcal.getText().toString());
+                        unit.getSelectedItem().toString(), kcal.getText().toString());
                 Intent intent = new Intent(UpdateData.this,ListData.class);
                 startActivity(intent);
                 finish();

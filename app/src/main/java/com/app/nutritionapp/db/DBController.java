@@ -68,7 +68,7 @@ public class DBController {
         return cursor;
     }
 
-    public void updateRegister(int id, String name, String quant, String kcal){
+    public void updateRegister(int id, String name, String quant, String unit, String kcal){
         ContentValues newValues;
         String where;
 
@@ -79,6 +79,7 @@ public class DBController {
         newValues = new ContentValues();
         newValues.put(CreateDB.FOOD_NAME, name);
         newValues.put(CreateDB.QUANTITY, quant);
+        newValues.put(CreateDB.UNIT, unit);
         newValues.put(CreateDB.CALORIES, kcal);
 
         db.update(CreateDB.TABLE,newValues,where,null);
