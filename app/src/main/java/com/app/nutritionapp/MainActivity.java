@@ -71,7 +71,6 @@ public class MainActivity extends NavigationLiveo implements OnItemClickListener
         // User Information
         this.userName.setText("Rudson Lima");
         this.userEmail.setText("rudsonlive@gmail.com");
-        this.userPhoto.setImageResource(R.drawable.ic_rudsonlive);
         this.userBackground.setImageResource(R.drawable.ic_user_background_first);
 
         // Creating items navigation
@@ -97,6 +96,27 @@ public class MainActivity extends NavigationLiveo implements OnItemClickListener
                 .setOnClickFooter(onClickFooter)
                 .build();
 
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.action_about:
+                // go home
+                Intent intent = new Intent(this, AboutActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                return true;
+            case R.id.action_exit:
+                intent = new Intent(Intent.ACTION_MAIN);
+                intent.addCategory(Intent.CATEGORY_HOME);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }
 /*
