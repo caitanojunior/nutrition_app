@@ -14,15 +14,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.Toast;
-
 import com.app.nutritionapp.R;
 
-/**
- * Created by fabriciolelis on 12/12/16.
- */
+
 
 public class MainFragment extends Fragment {
-    private boolean mSearchCheck;
+
     private static final String TEXT_FRAGMENT = "TEXT_FRAGMENT";
 
     public static MainFragment newInstance(String text){
@@ -60,53 +57,5 @@ public class MainFragment extends Fragment {
         // TODO Auto-generated method stub
         super.onCreateOptionsMenu(menu, inflater);
         inflater.inflate(R.menu.menu_main, menu);
-
-        //Select search item
-        final MenuItem menuItem = menu.findItem(R.id.menu_search);
-        menuItem.setVisible(true);
-
-        SearchView searchView = (SearchView) menuItem.getActionView();
-        searchView.setQueryHint(this.getString(R.string.search));
-
-        ((EditText) searchView.findViewById(R.id.search_src_text))
-                .setHintTextColor(getResources().getColor(R.color.nliveo_white));
-        searchView.setOnQueryTextListener(onQuerySearchView);
-
-        menu.findItem(R.id.menu_add).setVisible(true);
-
-        mSearchCheck = false;
     }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // TODO Auto-generated method stub
-
-        switch (item.getItemId()) {
-
-            case R.id.menu_add:
-                Toast.makeText(getActivity(), R.string.add, Toast.LENGTH_SHORT).show();
-                break;
-
-            case R.id.menu_search:
-                mSearchCheck = true;
-                Toast.makeText(getActivity(), R.string.search, Toast.LENGTH_SHORT).show();
-                break;
-        }
-        return true;
-    }
-
-    private SearchView.OnQueryTextListener onQuerySearchView = new SearchView.OnQueryTextListener() {
-        @Override
-        public boolean onQueryTextSubmit(String s) {
-            return false;
-        }
-
-        @Override
-        public boolean onQueryTextChange(String s) {
-            if (mSearchCheck){
-                // implement your search here
-            }
-            return false;
-        }
-    };
 }
