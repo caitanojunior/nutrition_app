@@ -31,7 +31,7 @@ public class MainActivity extends NavigationLiveo implements OnItemClickListener
 
         switch (position){
             case 2:
-                mFragment = new ViewPagerFragment();
+                mFragment = new MainFragment();
                 break;
 
             default:

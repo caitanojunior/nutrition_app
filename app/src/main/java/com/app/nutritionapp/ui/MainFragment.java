@@ -1,6 +1,7 @@
 package com.app.nutritionapp.ui;
 
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.os.Bundle;
 import android.support.v7.widget.SearchView;
 import android.view.LayoutInflater;
@@ -39,7 +40,9 @@ public class MainFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
 
         TextView mTxtTitle = (TextView) rootView.findViewById(R.id.txtTitle);
-        mTxtTitle.setText(getArguments().getString(TEXT_FRAGMENT));
+        if(savedInstanceState != null) {
+            mTxtTitle.setText(getArguments().getString(TEXT_FRAGMENT));
+        }
 
         rootView.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT ));
         return rootView;
