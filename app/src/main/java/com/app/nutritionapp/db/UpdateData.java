@@ -23,6 +23,7 @@ public class UpdateData extends Activity {
     Spinner unit;
     EditText kcal;
     Button update;
+    Button del;
     Cursor cursor;
     DBController crud;
     String id;
@@ -37,13 +38,13 @@ public class UpdateData extends Activity {
 
         crud = new DBController(getBaseContext());
 
-        name = (EditText)findViewById(R.id.editTextName);
-        quantity = (EditText)findViewById(R.id.editTextQuant);
+        name = (EditText) findViewById(R.id.editTextName);
+        quantity = (EditText) findViewById(R.id.editTextQuant);
         unit = (Spinner) findViewById(R.id.spinnerMeasure);
-        kcal = (EditText)findViewById(R.id.editTextKcal);
+        kcal = (EditText) findViewById(R.id.editTextKcal);
 
 
-        update = (Button)findViewById(R.id.ButtonUpdate);
+        update = (Button) findViewById(R.id.ButtonUpdate);
 
         cursor = crud.loadDataById(Integer.parseInt(id));
         name.setText(cursor.getString(cursor.getColumnIndexOrThrow(CreateDB.FOOD_NAME)));
@@ -55,9 +56,20 @@ public class UpdateData extends Activity {
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                crud.updateRegister(Integer.parseInt(id), name.getText().toString(),quantity.getText().toString(),
+                crud.updateRegister(Integer.parseInt(id), name.getText().toString(), quantity.getText().toString(),
                         unit.getSelectedItem().toString(), kcal.getText().toString());
-                Intent intent = new Intent(UpdateData.this,ListData.class);
+                Intent intent = new Intent(UpdateData.this, ListData.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        del = (Button) findViewById(R.id.ButtonDelete);
+        del.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                crud.deleteRegister(Integer.parseInt(id));
+                Intent intent = new Intent(UpdateData.this, ListData.class);
                 startActivity(intent);
                 finish();
             }
@@ -68,4 +80,5 @@ public class UpdateData extends Activity {
         Intent i = new Intent(UpdateData.this, ListData.class);
         startActivity(i);
     }
+
 }

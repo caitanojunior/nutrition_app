@@ -15,7 +15,8 @@ import com.app.nutritionapp.R;
  * Created by caitano on 11/18/16.
  */
 
-public class ListData extends AppCompatActivity {
+public class ListData extends AppCompatActivity{
+
     private ListView listName, listQuant, listUnit, listCalories;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
