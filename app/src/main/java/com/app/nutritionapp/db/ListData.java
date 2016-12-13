@@ -5,6 +5,7 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.AdapterView;
@@ -18,12 +19,19 @@ import com.app.nutritionapp.R;
 public class ListData extends AppCompatActivity{
 
     private ListView listName, listQuant, listUnit, listCalories;
+    Button del;
+    DBController crud;
+    String id;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        crud = new DBController(getBaseContext());
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_list_data);
 
-        DBController crud = new DBController(getBaseContext());
+        final DBController crud = new DBController(getBaseContext());
+        id = this.getIntent().getStringExtra("id");
+
         final Cursor cursor = crud.loadingData();
 
 
@@ -57,6 +65,25 @@ public class ListData extends AppCompatActivity{
                 codigo = cursor.getString(cursor.getColumnIndexOrThrow(CreateDB.ID));
                 Intent intent = new Intent(ListData.this, UpdateData.class);
                 intent.putExtra("id", codigo);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        listName.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                view.findViewById(R.id.buttonDelete).setVisibility(View.VISIBLE);
+                return false;
+            }
+        });
+
+        del = (Button) findViewById(R.id.ButtonDelete);
+        del.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                crud.deleteRegister(Integer.parseInt(id));
+                Intent intent = new Intent(ListData.this, ListData.class);
                 startActivity(intent);
                 finish();
             }

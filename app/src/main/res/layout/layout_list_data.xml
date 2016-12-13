@@ -86,6 +86,14 @@
         android:layout_marginRight="0dp"
         android:layout_below="@id/headerLayoutQuant"
         android:cacheColorHint="#00000000"></ListView>
+
+    <Button
+        android:id="@+id/buttonDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:visibility="invisible"/>
+
 </RelativeLayout>
 
 

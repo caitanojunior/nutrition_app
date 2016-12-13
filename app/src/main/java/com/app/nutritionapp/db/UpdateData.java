@@ -23,7 +23,6 @@ public class UpdateData extends Activity {
     Spinner unit;
     EditText kcal;
     Button update;
-    Button del;
     Cursor cursor;
     DBController crud;
     String id;
@@ -64,18 +63,7 @@ public class UpdateData extends Activity {
             }
         });
 
-        del = (Button) findViewById(R.id.ButtonDelete);
-        del.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                crud.deleteRegister(Integer.parseInt(id));
-                Intent intent = new Intent(UpdateData.this, ListData.class);
-                startActivity(intent);
-                finish();
-            }
-        });
     }
-
     public void onBackPressedListFood(View arg0) {
         Intent i = new Intent(UpdateData.this, ListData.class);
         startActivity(i);
