@@ -19,6 +19,7 @@ import com.app.nutritionapp.R;
 public class ListData extends AppCompatActivity{
 
     String id;
+    Button del;
     DBController crud;
 
     private ListView listName, listQuant, listUnit, listCalories;
@@ -38,7 +39,7 @@ public class ListData extends AppCompatActivity{
         int[] idViews = new int[] {R.id.nameItem, R.id.quantItem, R.id.unitItem, R.id.caloriesItem};
 
 
-        SimpleCursorAdapter adapterName = new SimpleCursorAdapter(getBaseContext(),
+        final SimpleCursorAdapter adapterName = new SimpleCursorAdapter(getBaseContext(),
                 R.layout.layout_list_data,cursor,Fields,idViews, 0);
         SimpleCursorAdapter adapterQuant = new SimpleCursorAdapter(getBaseContext(),
                 R.layout.layout_list_data,cursor,Fields,idViews, 0);
@@ -70,10 +71,20 @@ public class ListData extends AppCompatActivity{
         });
 
         listName.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-
             @Override
-            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, final long id) {
-                view.findViewById(R.id.buttonDelete).setVisibility(View.VISIBLE);
+            public boolean onItemLongClick(AdapterView<?> parent, final View view, int position, final long id) {
+
+                view.findViewById(R.id.buttonDelete2).setVisibility(View.VISIBLE);
+                del = (Button) findViewById(R.id.buttonDelete2);
+                del.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        crud.deleteRegister(id);
+                        Intent intent = new Intent(ListData.this, ListData.class);
+                        startActivity(intent);
+                        finish();
+                    }
+                });
                 return false;
             }
         });

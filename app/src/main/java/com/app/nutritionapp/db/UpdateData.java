@@ -24,9 +24,9 @@ public class UpdateData extends Activity {
     EditText kcal;
     Button update;
     Cursor cursor;
-    Button del;
     DBController crud;
     String id;
+    Button del;
 
 
     @Override
