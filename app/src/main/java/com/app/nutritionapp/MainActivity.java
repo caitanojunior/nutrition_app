@@ -2,17 +2,12 @@ package com.app.nutritionapp;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 
 import com.app.nutritionapp.db.ListData;
 import com.app.nutritionapp.ui.MainFragment;
-import com.app.nutritionapp.ui.ViewPagerFragment;
 
 
 import br.liveo.interfaces.OnItemClickListener;
@@ -24,6 +19,7 @@ import br.liveo.navigationliveo.NavigationLiveo;
 public class MainActivity extends NavigationLiveo implements OnItemClickListener {
 
     private HelpLiveo mHelpLiveo;
+
     @Override
     public void onItemClick(int position) {
         MainFragment mFragment;
@@ -66,23 +62,36 @@ public class MainActivity extends NavigationLiveo implements OnItemClickListener
         }
     };
 
+    private OnItemClickListener onClickBMI = new OnItemClickListener() {
+        @Override
+        public void onItemClick(int position) {
+
+            if(position == 1){
+                Intent it = new Intent(MainActivity.this, ImcActivity.class);
+                startActivity(it);
+                closeDrawer();
+            } else {
+                Intent it = new Intent(MainActivity.this, ImcActivity.class);
+                startActivity(it);
+                closeDrawer();
+            }
+
+        }
+    };
+
     @Override
     public void onInt(Bundle savedInstanceState) {
         // User Information
         this.userName.setText("Rudson Lima");
         this.userEmail.setText("rudsonlive@gmail.com");
-        this.userBackground.setImageResource(R.drawable.ic_user_background_first);
+        this.userBackground.setImageResource(R.drawable.thrive_nutrition);
 
         // Creating items navigation
         mHelpLiveo = new HelpLiveo();
-        mHelpLiveo.add(getString(R.string.inbox), R.drawable.ic_inbox_black_24dp, 7);
-        mHelpLiveo.addSubHeader(getString(R.string.categories)); //Item subHeader
-        mHelpLiveo.add(getString(R.string.starred), R.drawable.ic_star_black_24dp);
+        mHelpLiveo.add(getString(R.string.option_imc), R.drawable.ic_bmi_calculator);
+        mHelpLiveo.add(getString(R.string.options_food_list), R.drawable.plate_fork_knife);
         mHelpLiveo.add(getString(R.string.sent_mail), R.drawable.ic_send_black_24dp);
         mHelpLiveo.add(getString(R.string.drafts), R.drawable.ic_drafts_black_24dp);
-        mHelpLiveo.addSeparator(); // Item separator
-        mHelpLiveo.add(getString(R.string.trash), R.drawable.ic_delete_black_24dp);
-        mHelpLiveo.add(getString(R.string.spam), R.drawable.ic_report_black_24dp, 120);
 
         //with(this, Navigation.THEME_DARK). add theme dark
         //with(this, Navigation.THEME_LIGHT). add theme light
@@ -96,64 +105,13 @@ public class MainActivity extends NavigationLiveo implements OnItemClickListener
                 .setOnClickFooter(onClickFooter)
                 .build();
 
-    }
+        int position = this.getCurrentPosition();
+        onItemClick(position);
+        this.setElevationToolBar(position != 2 ? 15 : 0);
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle item selection
-        switch (item.getItemId()) {
-            case R.id.action_about:
-                // go home
-                Intent intent = new Intent(this, AboutActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
-                return true;
-            case R.id.action_exit:
-                intent = new Intent(Intent.ACTION_MAIN);
-                intent.addCategory(Intent.CATEGORY_HOME);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(intent);
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
     }
 }
 /*
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_main);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle item selection
-        switch (item.getItemId()) {
-            case R.id.action_about:
-                // go home
-                Intent intent = new Intent(this, AboutActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
-                return true;
-            case R.id.action_exit:
-                intent = new Intent(Intent.ACTION_MAIN);
-                intent.addCategory(Intent.CATEGORY_HOME);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(intent);
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
-
     public void cad_item(View view) {
         Intent it = new Intent(MainActivity.this, RegisterItemActivity.class);
         startActivity(it);
