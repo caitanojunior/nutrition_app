@@ -18,20 +18,19 @@ import com.app.nutritionapp.R;
 
 public class ListData extends AppCompatActivity{
 
-    private ListView listName, listQuant, listUnit, listCalories;
-    Button del;
-    DBController crud;
     String id;
+    DBController crud;
+
+    private ListView listName, listQuant, listUnit, listCalories;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        crud = new DBController(getBaseContext());
+        id = this.getIntent().getStringExtra("id");
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_list_data);
 
-        final DBController crud = new DBController(getBaseContext());
-        id = this.getIntent().getStringExtra("id");
-
+        crud = new DBController(getBaseContext());
         final Cursor cursor = crud.loadingData();
 
 
@@ -71,21 +70,11 @@ public class ListData extends AppCompatActivity{
         });
 
         listName.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+
             @Override
-            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, final long id) {
                 view.findViewById(R.id.buttonDelete).setVisibility(View.VISIBLE);
                 return false;
-            }
-        });
-
-        del = (Button) findViewById(R.id.ButtonDelete);
-        del.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                crud.deleteRegister(Integer.parseInt(id));
-                Intent intent = new Intent(ListData.this, ListData.class);
-                startActivity(intent);
-                finish();
             }
         });
     }

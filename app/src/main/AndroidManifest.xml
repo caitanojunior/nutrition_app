@@ -46,8 +46,7 @@
         </activity>
 
         <activity
-            android:name=".db.UpdateData"
-            android:screenOrientation="portrait">
+            android:name=".db.UpdateData">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>

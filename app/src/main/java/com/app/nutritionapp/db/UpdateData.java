@@ -24,6 +24,7 @@ public class UpdateData extends Activity {
     EditText kcal;
     Button update;
     Cursor cursor;
+    Button del;
     DBController crud;
     String id;
 
@@ -57,6 +58,17 @@ public class UpdateData extends Activity {
             public void onClick(View v) {
                 crud.updateRegister(Integer.parseInt(id), name.getText().toString(), quantity.getText().toString(),
                         unit.getSelectedItem().toString(), kcal.getText().toString());
+                Intent intent = new Intent(UpdateData.this, ListData.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        del = (Button) findViewById(R.id.ButtonDelete);
+        del.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                crud.deleteRegister(Integer.parseInt(id));
                 Intent intent = new Intent(UpdateData.this, ListData.class);
                 startActivity(intent);
                 finish();

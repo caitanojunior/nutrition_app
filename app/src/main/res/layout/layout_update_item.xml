@@ -104,7 +104,7 @@
 
     <!--
     <Button
-        android:id="@+id/ButtoCancel"
+        android:id="@+id/ButtonCancel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
