@@ -43,6 +43,8 @@
     <string name="btn_ok">Ok</string>
     <string name="imc_result">"BMI result: "</string>
     <string name="errorUnit">Select a unit of measurement</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
     <string-array name="measure_arrays">
         <item>Select</item>
         <item>Unit(s)</item>
@@ -54,5 +56,10 @@
         <item>Gram(s)</item>
         <item>Portion</item>
         <item>Spoon(s)</item>
+    </string-array>
+    <string-array name="options_array">
+        <item>BMI</item>
+        <item>Food List</item>
+        <item>Register foods</item>
     </string-array>
 </resources>

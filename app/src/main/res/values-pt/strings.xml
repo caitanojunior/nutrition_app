@@ -56,4 +56,9 @@
         <item>Porção</item>
         <item>Colher(s)</item>
     </string-array>
+    <string-array name="options_array">
+        <item>IMC</item>
+        <item>Lista de Alimentos</item>
+        <item>RRegistro de Alimento</item>
+    </string-array>
 </resources>
