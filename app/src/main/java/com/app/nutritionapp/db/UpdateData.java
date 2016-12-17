@@ -13,10 +13,6 @@ import com.app.nutritionapp.MainActivity;
 import com.app.nutritionapp.R;
 import com.app.nutritionapp.RegisterItemActivity;
 
-/**
- * Created by caitano on 12/9/16.
- */
-
 public class UpdateData extends Activity {
     EditText name;
     EditText quantity;

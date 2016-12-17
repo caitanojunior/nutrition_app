@@ -10,10 +10,6 @@ import android.widget.Toast;
 
 import com.app.nutritionapp.db.DBController;
 
-/**
- * Created by caitano on 9/23/16.
- */
-
 public class RegisterItemActivity extends AppCompatActivity {
 
     @Override
