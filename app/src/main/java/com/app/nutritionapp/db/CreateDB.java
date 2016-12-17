@@ -1,13 +1,8 @@
 package com.app.nutritionapp.db;
 
-
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
-/**
- * Created by fabricio on 11/16/16.
- */
 
 public class CreateDB extends SQLiteOpenHelper {
     public static final String TABLE = "foods";

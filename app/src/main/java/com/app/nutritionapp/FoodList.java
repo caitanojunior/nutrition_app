@@ -1,4 +1,4 @@
-package com.app.nutritionapp.db;
+package com.app.nutritionapp;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -9,13 +9,10 @@ import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.AdapterView;
 
-import com.app.nutritionapp.R;
+import com.app.nutritionapp.db.CreateDB;
+import com.app.nutritionapp.db.DBController;
 
-/**
- * Created by caitano on 11/18/16.
- */
-
-public class ListData extends AppCompatActivity {
+public class FoodList extends AppCompatActivity {
     private ListView listName, listQuant, listUnit, listCalories;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +51,7 @@ public class ListData extends AppCompatActivity {
                 String codigo;
                 cursor.moveToPosition(position);
                 codigo = cursor.getString(cursor.getColumnIndexOrThrow(CreateDB.ID));
-                Intent intent = new Intent(ListData.this, UpdateData.class);
+                Intent intent = new Intent(FoodList.this, UpdateFoodRegister.class);
                 intent.putExtra("id", codigo);
                 startActivity(intent);
                 finish();

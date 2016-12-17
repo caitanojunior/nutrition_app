@@ -6,7 +6,7 @@
     android:background="#E5FCC2"
     android:orientation="vertical"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".db.ListData">
+    tools:context=".FoodList">
 
 
     <LinearLayout
