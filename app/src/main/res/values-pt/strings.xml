@@ -56,4 +56,12 @@
         <item>Porção</item>
         <item>Colher(s)</item>
     </string-array>
+    <string-array name="options_array">
+        <item>IMC</item>
+        <item>Lista de Alimentos</item>
+        <item>Registro de Alimento</item>
+    </string-array>
+
+    <string name="navigation_drawer_open">Abrir menu lateral</string>
+    <string name="navigation_drawer_close">Fechar menu lateral</string>
 </resources>

@@ -4,7 +4,7 @@
     <string name="options_main">Options:</string>
     <string name="options_register_foods">Register foods</string>
     <string name="options_food_list">Food List</string>
-    <string name="option_imc">BMI</string>
+    <string name="options_imc">BMI</string>
     <string name="option_exit">Exit</string>
     <string name="label_name_food">Name</string>
     <string name="label_quant">Quantity</string>
@@ -30,6 +30,7 @@
         &#009;&#009;Caitano Júnior\n
         &#009;&#009;Fabrício Lélis.
     </string>
+
     <string name="action_exit">Exit</string>
     <string name="invalid_value_imc_calc">Please, put a valid value</string>
     <string name="very_underweight_bmi">You are very underweight!</string>
@@ -43,6 +44,9 @@
     <string name="btn_ok">Ok</string>
     <string name="imc_result">"BMI result: "</string>
     <string name="errorUnit">Select a unit of measurement</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
     <string-array name="measure_arrays">
         <item>Select</item>
         <item>Unit(s)</item>
@@ -55,4 +59,8 @@
         <item>Portion</item>
         <item>Spoon(s)</item>
     </string-array>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
 </resources>
