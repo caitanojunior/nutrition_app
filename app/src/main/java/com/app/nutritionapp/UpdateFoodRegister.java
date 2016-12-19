@@ -1,23 +1,17 @@
-package com.app.nutritionapp.db;
-
-import android.app.Activity;
+package com.app.nutritionapp;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
-import com.app.nutritionapp.MainActivity;
-import com.app.nutritionapp.R;
-import com.app.nutritionapp.RegisterItemActivity;
+import com.app.nutritionapp.db.CreateDB;
+import com.app.nutritionapp.db.DBController;
 
-/**
- * Created by caitano on 12/9/16.
- */
-
-public class UpdateData extends Activity {
+public class UpdateFoodRegister extends AppCompatActivity {
     EditText name;
     EditText quantity;
     Spinner unit;
@@ -58,7 +52,8 @@ public class UpdateData extends Activity {
             public void onClick(View v) {
                 crud.updateRegister(Integer.parseInt(id), name.getText().toString(), quantity.getText().toString(),
                         unit.getSelectedItem().toString(), kcal.getText().toString());
-                Intent intent = new Intent(UpdateData.this, ListData.class);
+
+                Intent intent = new Intent(UpdateFoodRegister.this, FoodList.class);
                 startActivity(intent);
                 finish();
             }
@@ -69,7 +64,7 @@ public class UpdateData extends Activity {
             @Override
             public void onClick(View v) {
                 crud.deleteRegister(Integer.parseInt(id));
-                Intent intent = new Intent(UpdateData.this, ListData.class);
+                Intent intent = new Intent(UpdateFoodRegister.this, FoodList.class);
                 startActivity(intent);
                 finish();
             }
@@ -77,7 +72,7 @@ public class UpdateData extends Activity {
 
     }
     public void onBackPressedListFood(View arg0) {
-        Intent i = new Intent(UpdateData.this, ListData.class);
+        Intent i = new Intent(UpdateFoodRegister.this, FoodList.class);
         startActivity(i);
     }
 

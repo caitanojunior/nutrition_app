@@ -5,10 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-/**
- * Created by fabricio on 11/16/16.
- */
-
 public class DBController {
 
     private static final String TABLE = "foods";

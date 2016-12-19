@@ -6,9 +6,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.Window;
 
-/**
- * Created by caitano on 8/29/16.
- */
 public class Splash extends Activity implements Runnable {
 
     @Override

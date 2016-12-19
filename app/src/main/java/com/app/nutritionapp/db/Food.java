@@ -1,8 +1,4 @@
-package com.app.nutritionapp;
-
-/**
- * Created by caitano on 9/23/16.
- */
+package com.app.nutritionapp.db;
 
 public class Food {
 

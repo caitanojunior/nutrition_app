@@ -16,9 +16,6 @@ import com.google.android.gms.common.api.GoogleApiClient;
 
 import java.text.DecimalFormat;
 
-/**
- * Created by caitano on 10/22/16.
- */
 public class ImcActivity extends AppCompatActivity {
 
     /**
