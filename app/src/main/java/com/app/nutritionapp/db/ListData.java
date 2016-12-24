@@ -17,14 +17,15 @@ import com.app.nutritionapp.R;
 
 
 public class ListData extends AppCompatActivity {
-    private ListView listName, listQuant, listUnit, listCalories;
+    DBController crud;
+    private ListView listName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_list_data);
 
-        DBController crud = new DBController(getBaseContext());
+        crud = new DBController(getBaseContext());
         final Cursor cursor = crud.loadingData();
 
 
@@ -43,21 +44,40 @@ public class ListData extends AppCompatActivity {
 
         listName = (ListView) findViewById(R.id.listView);
         listName.setAdapter(adapterName);
-        listQuant = (ListView) findViewById(R.id.listView);
+        ListView listQuant = (ListView) findViewById(R.id.listView);
         listQuant.setAdapter(adapterQuant);
-        listUnit = (ListView) findViewById(R.id.listView);
+        ListView listUnit = (ListView) findViewById(R.id.listView);
         listUnit.setAdapter(adapterUnit);
-        listCalories = (ListView) findViewById(R.id.listView);
+        ListView listCalories = (ListView) findViewById(R.id.listView);
         listCalories.setAdapter(adapterCalories);
         registerForContextMenu(listName);
 
         listName.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                String codigo;
+                /*String codigo;
                 cursor.moveToPosition(position);
-                codigo = cursor.getString(cursor.getColumnIndexOrThrow(CreateDB.ID));
-                return true;
+                codigo = cursor.getString(cursor.getColumnIndexOrThrow(CreateDB.ID));*/
+                return false;
+            }
+        });
+
+       /* listName.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, final View view, int position, final long id) {
+
+                view.findViewById(R.id.buttonDelete2).setVisibility(View.VISIBLE);
+                del = (Button) findViewById(R.id.buttonDelete2);
+                del.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        crud.deleteRegister(id);
+                        Intent intent = new Intent(ListData.this, ListData.class);
+                        startActivity(intent);
+                        finish();
+                    }
+                });
+                return false;
             }
         });
 
@@ -76,7 +96,6 @@ public class ListData extends AppCompatActivity {
     }
 
 
-
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
@@ -87,13 +106,20 @@ public class ListData extends AppCompatActivity {
     @Override
     public boolean onContextItemSelected(MenuItem item) {
         AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
-        String codigo = (String) listName.getItemAtPosition(info.position);
+        Intent intent;
+
         switch (item.getItemId()) {
             case R.id.context_menu_delete:
+                crud.deleteRegister(info.id);
+                intent = new Intent(ListData.this, ListData.class);
+                startActivity(intent);
+                finish();
                 return true;
             case R.id.context_menu_update:
-                Intent intent = new Intent(ListData.this, UpdateData.class);
-                intent.putExtra("id", codigo);
+                //String codigo;
+                //cursor.moveToPosition(position);
+                intent = new Intent(ListData.this, UpdateData.class);
+                intent.putExtra("id", info.id);
                 startActivity(intent);
                 finish();
                 return true;
