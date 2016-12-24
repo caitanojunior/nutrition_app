@@ -56,44 +56,10 @@ public class FoodList extends AppCompatActivity {
         listName.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                /*String codigo;
-                cursor.moveToPosition(position);
-                codigo = cursor.getString(cursor.getColumnIndexOrThrow(CreateDB.ID));*/
+
                 return false;
             }
         });
-
-       /* listName.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(AdapterView<?> parent, final View view, int position, final long id) {
-
-                view.findViewById(R.id.buttonDelete2).setVisibility(View.VISIBLE);
-                del = (Button) findViewById(R.id.buttonDelete2);
-                del.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        crud.deleteRegister(id);
-                        Intent intent = new Intent(ListData.this, ListData.class);
-                        startActivity(intent);
-                        finish();
-                    }
-                });
-                return false;
-            }
-        });
-
-        /*listName.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String codigo;
-                cursor.moveToPosition(position);
-                codigo = cursor.getString(cursor.getColumnIndexOrThrow(CreateDB.ID));
-                Intent intent = new Intent(FoodList.this, UpdateFoodRegister.class);
-                intent.putExtra("id", codigo);
-                startActivity(intent);
-                finish();
-            }
-        }); */
     }
 
 
@@ -117,8 +83,6 @@ public class FoodList extends AppCompatActivity {
                 finish();
                 return true;
             case R.id.context_menu_update:
-                //String codigo;
-                //cursor.moveToPosition(position);
                 intent = new Intent(FoodList.this, UpdateFoodRegister.class);
                 intent.putExtra("id", info.id);
                 startActivity(intent);
