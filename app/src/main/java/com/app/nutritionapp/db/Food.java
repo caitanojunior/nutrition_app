@@ -1,4 +1,4 @@
-package com.app.nutritionapp;
+package com.app.nutritionapp.db;
 
 public class Food {
 

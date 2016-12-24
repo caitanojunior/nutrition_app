@@ -1,6 +1,5 @@
 package com.app.nutritionapp.db;
 
-
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;

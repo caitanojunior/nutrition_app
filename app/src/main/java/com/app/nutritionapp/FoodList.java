@@ -1,4 +1,4 @@
-package com.app.nutritionapp.db;
+package com.app.nutritionapp;
 
 
 import android.content.Intent;
@@ -13,10 +13,11 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
-import com.app.nutritionapp.R;
+import com.app.nutritionapp.db.CreateDB;
+import com.app.nutritionapp.db.DBController;
 
-
-public class ListData extends AppCompatActivity {
+public class FoodList extends AppCompatActivity {
+    private ListView  listQuant, listUnit, listCalories;
     DBController crud;
     private ListView listName;
 
@@ -87,7 +88,7 @@ public class ListData extends AppCompatActivity {
                 String codigo;
                 cursor.moveToPosition(position);
                 codigo = cursor.getString(cursor.getColumnIndexOrThrow(CreateDB.ID));
-                Intent intent = new Intent(ListData.this, UpdateData.class);
+                Intent intent = new Intent(FoodList.this, UpdateFoodRegister.class);
                 intent.putExtra("id", codigo);
                 startActivity(intent);
                 finish();
@@ -111,14 +112,14 @@ public class ListData extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.context_menu_delete:
                 crud.deleteRegister(info.id);
-                intent = new Intent(ListData.this, ListData.class);
+                intent = new Intent(FoodList.this, FoodList.class);
                 startActivity(intent);
                 finish();
                 return true;
             case R.id.context_menu_update:
                 //String codigo;
                 //cursor.moveToPosition(position);
-                intent = new Intent(ListData.this, UpdateData.class);
+                intent = new Intent(FoodList.this, UpdateFoodRegister.class);
                 intent.putExtra("id", info.id);
                 startActivity(intent);
                 finish();

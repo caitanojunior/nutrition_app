@@ -36,14 +36,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".db.ListData"
+            android:name=".FoodList"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".db.UpdateData"
+            android:name=".UpdateFoodRegister"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

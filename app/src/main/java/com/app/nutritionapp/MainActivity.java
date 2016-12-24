@@ -11,8 +11,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.app.nutritionapp.db.ListData;
-
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -87,7 +85,7 @@ public class MainActivity extends AppCompatActivity
             startActivity(it);
 
         } else if (id == R.id.nav_list_foods) {
-            Intent it = new Intent(MainActivity.this, ListData.class);
+            Intent it = new Intent(MainActivity.this, FoodList.class);
             startActivity(it);
         }
 
