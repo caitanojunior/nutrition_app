@@ -24,7 +24,7 @@ public class FoodList extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_list_data);
+        setContentView(R.layout.layout_food_list);
 
         crud = new DBController(getBaseContext());
         final Cursor cursor = crud.loadingData();
@@ -35,13 +35,13 @@ public class FoodList extends AppCompatActivity {
 
 
         SimpleCursorAdapter adapterName = new SimpleCursorAdapter(getBaseContext(),
-                R.layout.layout_list_data, cursor, Fields, idViews, 0);
+                R.layout.layout_food_list, cursor, Fields, idViews, 0);
         SimpleCursorAdapter adapterQuant = new SimpleCursorAdapter(getBaseContext(),
-                R.layout.layout_list_data, cursor, Fields, idViews, 0);
+                R.layout.layout_food_list, cursor, Fields, idViews, 0);
         SimpleCursorAdapter adapterUnit = new SimpleCursorAdapter(getBaseContext(),
-                R.layout.layout_list_data, cursor, Fields, idViews, 0);
+                R.layout.layout_food_list, cursor, Fields, idViews, 0);
         SimpleCursorAdapter adapterCalories = new SimpleCursorAdapter(getBaseContext(),
-                R.layout.layout_list_data, cursor, Fields, idViews, 0);
+                R.layout.layout_food_list, cursor, Fields, idViews, 0);
 
         listName = (ListView) findViewById(R.id.listView);
         listName.setAdapter(adapterName);
