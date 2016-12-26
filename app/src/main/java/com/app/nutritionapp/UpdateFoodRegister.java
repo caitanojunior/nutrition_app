@@ -1,4 +1,5 @@
 package com.app.nutritionapp;
+
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -12,6 +13,7 @@ import com.app.nutritionapp.db.CreateDB;
 import com.app.nutritionapp.db.DBController;
 
 public class UpdateFoodRegister extends AppCompatActivity {
+
     EditText name;
     EditText quantity;
     Spinner unit;
@@ -26,7 +28,7 @@ public class UpdateFoodRegister extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_update_item);
+        setContentView(R.layout.layout_update__food_register);
 
         id = this.getIntent().getStringExtra("id");
 
