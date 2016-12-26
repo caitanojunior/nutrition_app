@@ -17,9 +17,8 @@ import com.app.nutritionapp.db.CreateDB;
 import com.app.nutritionapp.db.DBController;
 
 public class FoodList extends AppCompatActivity {
-    private ListView  listQuant, listUnit, listCalories;
+    private ListView  listName, listQuant, listUnit, listCalories;
     DBController crud;
-    private ListView listName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,23 +44,14 @@ public class FoodList extends AppCompatActivity {
 
         listName = (ListView) findViewById(R.id.listView);
         listName.setAdapter(adapterName);
-        ListView listQuant = (ListView) findViewById(R.id.listView);
+        listQuant = (ListView) findViewById(R.id.listView);
         listQuant.setAdapter(adapterQuant);
-        ListView listUnit = (ListView) findViewById(R.id.listView);
+        listUnit = (ListView) findViewById(R.id.listView);
         listUnit.setAdapter(adapterUnit);
-        ListView listCalories = (ListView) findViewById(R.id.listView);
+        listCalories = (ListView) findViewById(R.id.listView);
         listCalories.setAdapter(adapterCalories);
         registerForContextMenu(listName);
-
-        listName.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-
-                return false;
-            }
-        });
     }
-
 
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
@@ -83,8 +73,11 @@ public class FoodList extends AppCompatActivity {
                 finish();
                 return true;
             case R.id.context_menu_update:
+                Cursor cursor = crud.loadingData();
+                String codigo;
+                codigo = cursor.getString(cursor.getColumnIndexOrThrow(CreateDB.ID));
                 intent = new Intent(FoodList.this, UpdateFoodRegister.class);
-                intent.putExtra("id", info.id);
+                intent.putExtra("id", String.valueOf(info.id));
                 startActivity(intent);
                 finish();
                 return true;

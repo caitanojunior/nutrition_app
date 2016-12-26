@@ -22,18 +22,15 @@ public class UpdateFoodRegister extends AppCompatActivity {
     Cursor cursor;
     DBController crud;
     String id;
-    Button del;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_update__food_register);
-
-        id = this.getIntent().getStringExtra("id");
+        setContentView(R.layout.layout_update_food_register);
 
         crud = new DBController(getBaseContext());
 
+        id = this.getIntent().getStringExtra("id");
         name = (EditText) findViewById(R.id.editTextName);
         quantity = (EditText) findViewById(R.id.editTextQuant);
         unit = (Spinner) findViewById(R.id.spinnerMeasure);
@@ -60,18 +57,6 @@ public class UpdateFoodRegister extends AppCompatActivity {
                 finish();
             }
         });
-
-        del = (Button) findViewById(R.id.ButtonDelete);
-        del.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                crud.deleteRegister(Integer.parseInt(id));
-                Intent intent = new Intent(UpdateFoodRegister.this, FoodList.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-
     }
     public void onBackPressedListFood(View arg0) {
         Intent i = new Intent(UpdateFoodRegister.this, FoodList.class);
