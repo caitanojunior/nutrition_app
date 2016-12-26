@@ -103,7 +103,7 @@
         android:text="@string/btn_update_food" />
 
     <Button
-        android:id="@+id/ButtoCancel"
+        android:id="@+id/ButtonCancel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
@@ -112,4 +112,5 @@
         android:layout_marginTop="60dp"
         android:onClick="onBackPressedListFood"
         android:text="@string/btn_cancel_register_new_food" />
+
 </RelativeLayout>
