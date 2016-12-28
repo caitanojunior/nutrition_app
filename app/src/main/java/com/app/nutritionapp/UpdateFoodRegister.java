@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.app.nutritionapp.db.CreateDB;
 import com.app.nutritionapp.db.DBController;
@@ -36,7 +37,6 @@ public class UpdateFoodRegister extends AppCompatActivity {
         unit = (Spinner) findViewById(R.id.spinnerMeasure);
         kcal = (EditText) findViewById(R.id.editTextKcal);
 
-
         update = (Button) findViewById(R.id.ButtonUpdate);
 
         cursor = crud.loadDataById(Integer.parseInt(id));
@@ -45,8 +45,8 @@ public class UpdateFoodRegister extends AppCompatActivity {
         unit.setTag(cursor.getString(cursor.getColumnIndexOrThrow(CreateDB.UNIT)));
         kcal.setText(cursor.getString(cursor.getColumnIndexOrThrow(CreateDB.CALORIES)));
 
-
         update.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 crud.updateRegister(Integer.parseInt(id), name.getText().toString(), quantity.getText().toString(),
@@ -62,5 +62,4 @@ public class UpdateFoodRegister extends AppCompatActivity {
         Intent i = new Intent(UpdateFoodRegister.this, FoodList.class);
         startActivity(i);
     }
-
 }
